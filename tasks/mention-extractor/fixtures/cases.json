@@ -1,0 +1,495 @@
+[
+  {
+    "input": "",
+    "expected": []
+  },
+  {
+    "input": "@Ada",
+    "expected": [
+      "Ada"
+    ]
+  },
+  {
+    "input": "@Ada @ada @BOB @bob",
+    "expected": [
+      "Ada",
+      "BOB"
+    ]
+  },
+  {
+    "input": "x@alice @@bob _@carol 1@d",
+    "expected": []
+  },
+  {
+    "input": "\u00e9@Bob \u6771\u4eac@Ada \ud83d\ude80@Hi",
+    "expected": [
+      "Bob",
+      "Ada",
+      "Hi"
+    ]
+  },
+  {
+    "input": "@caf\u00e9 @ab-cd",
+    "expected": [
+      "caf",
+      "ab"
+    ]
+  },
+  {
+    "input": "`@hidden` @Shown",
+    "expected": [
+      "Shown"
+    ]
+  },
+  {
+    "input": "``@hidden ` @x`` @y",
+    "expected": [
+      "y"
+    ]
+  },
+  {
+    "input": "`@a\n@b` @c",
+    "expected": [
+      "c"
+    ]
+  },
+  {
+    "input": "`unmatched @a",
+    "expected": [
+      "a"
+    ]
+  },
+  {
+    "input": "``unmatched `@a` @b",
+    "expected": [
+      "b"
+    ]
+  },
+  {
+    "input": "`@a`` @b` @c",
+    "expected": [
+      "c"
+    ]
+  },
+  {
+    "input": "``@a` @b`` @c",
+    "expected": [
+      "c"
+    ]
+  },
+  {
+    "input": "```@a`` @b``` @c",
+    "expected": [
+      "c"
+    ]
+  },
+  {
+    "input": "\\`@a` @b",
+    "expected": [
+      "b"
+    ]
+  },
+  {
+    "input": "`@Ada` @ada",
+    "expected": [
+      "ada"
+    ]
+  },
+  {
+    "input": "@a.@b,@c;@d!@e",
+    "expected": [
+      "a",
+      "b",
+      "c",
+      "d",
+      "e"
+    ]
+  },
+  {
+    "input": "@1a @_a @ @-a",
+    "expected": []
+  },
+  {
+    "input": "@a@b",
+    "expected": [
+      "a"
+    ]
+  },
+  {
+    "input": "@A_1",
+    "expected": [
+      "A_1"
+    ]
+  },
+  {
+    "input": "@@@a",
+    "expected": []
+  },
+  {
+    "input": "`@a`@b",
+    "expected": [
+      "b"
+    ]
+  },
+  {
+    "input": "@a``@b``@c",
+    "expected": [
+      "a",
+      "c"
+    ]
+  },
+  {
+    "input": "@A",
+    "expected": [
+      "A"
+    ]
+  },
+  {
+    "input": "@Ab",
+    "expected": [
+      "Ab"
+    ]
+  },
+  {
+    "input": "@Abb",
+    "expected": [
+      "Abb"
+    ]
+  },
+  {
+    "input": "@Abbb",
+    "expected": [
+      "Abbb"
+    ]
+  },
+  {
+    "input": "@Abbbb",
+    "expected": [
+      "Abbbb"
+    ]
+  },
+  {
+    "input": "@Abbbbb",
+    "expected": [
+      "Abbbbb"
+    ]
+  },
+  {
+    "input": "@Abbbbbb",
+    "expected": [
+      "Abbbbbb"
+    ]
+  },
+  {
+    "input": "@Abbbbbbb",
+    "expected": [
+      "Abbbbbbb"
+    ]
+  },
+  {
+    "input": "@Abbbbbbbb",
+    "expected": [
+      "Abbbbbbbb"
+    ]
+  },
+  {
+    "input": "@Abbbbbbbbb",
+    "expected": [
+      "Abbbbbbbbb"
+    ]
+  },
+  {
+    "input": "@Abbbbbbbbbb",
+    "expected": [
+      "Abbbbbbbbbb"
+    ]
+  },
+  {
+    "input": "@Abbbbbbbbbbb",
+    "expected": [
+      "Abbbbbbbbbbb"
+    ]
+  },
+  {
+    "input": "@Abbbbbbbbbbbb",
+    "expected": [
+      "Abbbbbbbbbbbb"
+    ]
+  },
+  {
+    "input": "@Abbbbbbbbbbbbb",
+    "expected": [
+      "Abbbbbbbbbbbbb"
+    ]
+  },
+  {
+    "input": "@Abbbbbbbbbbbbbb",
+    "expected": [
+      "Abbbbbbbbbbbbbb"
+    ]
+  },
+  {
+    "input": "@Abbbbbbbbbbbbbbb",
+    "expected": [
+      "Abbbbbbbbbbbbbbb"
+    ]
+  },
+  {
+    "input": "@Abbbbbbbbbbbbbbbb",
+    "expected": [
+      "Abbbbbbbbbbbbbbbb"
+    ]
+  },
+  {
+    "input": "@Abbbbbbbbbbbbbbbbb",
+    "expected": [
+      "Abbbbbbbbbbbbbbbbb"
+    ]
+  },
+  {
+    "input": "@Abbbbbbbbbbbbbbbbbb",
+    "expected": [
+      "Abbbbbbbbbbbbbbbbbb"
+    ]
+  },
+  {
+    "input": "@Abbbbbbbbbbbbbbbbbbb",
+    "expected": [
+      "Abbbbbbbbbbbbbbbbbbb"
+    ]
+  },
+  {
+    "input": "@Abbbbbbbbbbbbbbbbbbbb",
+    "expected": [
+      "Abbbbbbbbbbbbbbbbbbbb"
+    ]
+  },
+  {
+    "input": "@Abbbbbbbbbbbbbbbbbbbbb",
+    "expected": [
+      "Abbbbbbbbbbbbbbbbbbbbb"
+    ]
+  },
+  {
+    "input": "@Abbbbbbbbbbbbbbbbbbbbbb",
+    "expected": [
+      "Abbbbbbbbbbbbbbbbbbbbbb"
+    ]
+  },
+  {
+    "input": "@Abbbbbbbbbbbbbbbbbbbbbbb",
+    "expected": [
+      "Abbbbbbbbbbbbbbbbbbbbbbb"
+    ]
+  },
+  {
+    "input": "@Abbbbbbbbbbbbbbbbbbbbbbbb",
+    "expected": [
+      "Abbbbbbbbbbbbbbbbbbbbbbbb"
+    ]
+  },
+  {
+    "input": "@Abbbbbbbbbbbbbbbbbbbbbbbbb",
+    "expected": [
+      "Abbbbbbbbbbbbbbbbbbbbbbbbb"
+    ]
+  },
+  {
+    "input": "@Abbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "expected": [
+      "Abbbbbbbbbbbbbbbbbbbbbbbbbb"
+    ]
+  },
+  {
+    "input": "@Abbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "expected": [
+      "Abbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    ]
+  },
+  {
+    "input": "@Abbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "expected": [
+      "Abbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    ]
+  },
+  {
+    "input": "@Abbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "expected": [
+      "Abbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    ]
+  },
+  {
+    "input": "@Abbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "expected": []
+  },
+  {
+    "input": "@Abbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "expected": []
+  },
+  {
+    "input": "@Abbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "expected": []
+  },
+  {
+    "input": "@Abbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "expected": []
+  },
+  {
+    "input": "@Abbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "expected": []
+  },
+  {
+    "input": "`@hidden``@also` @seen",
+    "expected": [
+      "seen"
+    ]
+  },
+  {
+    "input": "``@hidden```@also`` @seen",
+    "expected": [
+      "seen"
+    ]
+  },
+  {
+    "input": "```@hidden````@also``` @seen",
+    "expected": [
+      "seen"
+    ]
+  },
+  {
+    "input": "````@hidden`````@also```` @seen",
+    "expected": [
+      "seen"
+    ]
+  },
+  {
+    "input": "`````@hidden``````@also````` @seen",
+    "expected": [
+      "seen"
+    ]
+  },
+  {
+    "input": "``````@hidden```````@also`````` @seen",
+    "expected": [
+      "seen"
+    ]
+  },
+  {
+    "input": "```````@hidden````````@also``````` @seen",
+    "expected": [
+      "seen"
+    ]
+  },
+  {
+    "input": "````````@hidden`````````@also```````` @seen",
+    "expected": [
+      "seen"
+    ]
+  },
+  {
+    "input": "(@Z_9",
+    "expected": [
+      "Z_9"
+    ]
+  },
+  {
+    "input": "[@Z_9",
+    "expected": [
+      "Z_9"
+    ]
+  },
+  {
+    "input": "{@Z_9",
+    "expected": [
+      "Z_9"
+    ]
+  },
+  {
+    "input": "\n@Z_9",
+    "expected": [
+      "Z_9"
+    ]
+  },
+  {
+    "input": "\t@Z_9",
+    "expected": [
+      "Z_9"
+    ]
+  },
+  {
+    "input": " @Z_9",
+    "expected": [
+      "Z_9"
+    ]
+  },
+  {
+    "input": ".@Z_9",
+    "expected": [
+      "Z_9"
+    ]
+  },
+  {
+    "input": "-@Z_9",
+    "expected": [
+      "Z_9"
+    ]
+  },
+  {
+    "input": "\u00e9@Z_9",
+    "expected": [
+      "Z_9"
+    ]
+  },
+  {
+    "input": "\ud83d\ude80@Z_9",
+    "expected": [
+      "Z_9"
+    ]
+  },
+  {
+    "input": "a@Z",
+    "expected": []
+  },
+  {
+    "input": "Z@Z",
+    "expected": []
+  },
+  {
+    "input": "0@Z",
+    "expected": []
+  },
+  {
+    "input": "_@Z",
+    "expected": []
+  },
+  {
+    "input": "@@Z",
+    "expected": []
+  },
+  {
+    "input": null,
+    "error": "TypeError"
+  },
+  {
+    "input": true,
+    "error": "TypeError"
+  },
+  {
+    "input": 1,
+    "error": "TypeError"
+  },
+  {
+    "input": [],
+    "error": "TypeError"
+  },
+  {
+    "input": {},
+    "error": "TypeError"
+  },
+  {
+    "input": [
+      "x"
+    ],
+    "error": "TypeError"
+  }
+]
