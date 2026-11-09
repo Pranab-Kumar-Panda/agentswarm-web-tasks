@@ -509,6 +509,157 @@
     "expected": []
   },
   {
+    "input": "<a\"b>; rel=next, <ok>; rel=prev",
+    "expected": [
+      {
+        "url": "a\"b",
+        "rels": [
+          "next"
+        ]
+      },
+      {
+        "url": "ok",
+        "rels": [
+          "prev"
+        ]
+      }
+    ]
+  },
+  {
+    "input": "<a\"b\"c>; rel=next, <ok>; rel=prev",
+    "expected": [
+      {
+        "url": "a\"b\"c",
+        "rels": [
+          "next"
+        ]
+      },
+      {
+        "url": "ok",
+        "rels": [
+          "prev"
+        ]
+      }
+    ]
+  },
+  {
+    "input": "<a\\\"b>; rel=next, <ok>; rel=prev",
+    "expected": [
+      {
+        "url": "a\\\"b",
+        "rels": [
+          "next"
+        ]
+      },
+      {
+        "url": "ok",
+        "rels": [
+          "prev"
+        ]
+      }
+    ]
+  },
+  {
+    "input": "<a;b>; rel=next, <ok>; rel=prev",
+    "expected": [
+      {
+        "url": "a;b",
+        "rels": [
+          "next"
+        ]
+      },
+      {
+        "url": "ok",
+        "rels": [
+          "prev"
+        ]
+      }
+    ]
+  },
+  {
+    "input": "<a=b>; rel=next, <ok>; rel=prev",
+    "expected": [
+      {
+        "url": "a=b",
+        "rels": [
+          "next"
+        ]
+      },
+      {
+        "url": "ok",
+        "rels": [
+          "prev"
+        ]
+      }
+    ]
+  },
+  {
+    "input": "<ab>; rel=next, <ok>; rel=prev",
+    "expected": [
+      {
+        "url": "ok",
+        "rels": [
+          "prev"
+        ]
+      }
+    ]
+  },
+  {
+    "input": "<a﻿b>; rel=next, <ok>; rel=prev",
+    "expected": [
+      {
+        "url": "ok",
+        "rels": [
+          "prev"
+        ]
+      }
+    ]
+  },
+  {
+    "input": "<a b>; rel=next, <ok>; rel=prev",
+    "expected": [
+      {
+        "url": "ok",
+        "rels": [
+          "prev"
+        ]
+      }
+    ]
+  },
+  {
+    "input": "<a　b>; rel=next, <ok>; rel=prev",
+    "expected": [
+      {
+        "url": "ok",
+        "rels": [
+          "prev"
+        ]
+      }
+    ]
+  },
+  {
+    "input": "<bad, <ok>; rel=prev",
+    "expected": [
+      {
+        "url": "ok",
+        "rels": [
+          "prev"
+        ]
+      }
+    ]
+  },
+  {
+    "input": "<p>; title=\"<quoted>\"; rel=next",
+    "expected": [
+      {
+        "url": "p",
+        "rels": [
+          "next"
+        ]
+      }
+    ]
+  },
+  {
     "input": " \t<p1> ; REL = \"next\" ; title=\"a,b\"\t ",
     "expected": [
       {
