@@ -1,0 +1,40 @@
+use unicode_runs::encode_runs;
+#[test]
+fn spec_cases() {
+assert_eq!(encode_runs(""),vec![]);
+assert_eq!(encode_runs("a"),vec![("a".chars().next().unwrap(),1)]);
+assert_eq!(encode_runs("aaabbcaa"),vec![("a".chars().next().unwrap(),3),("b".chars().next().unwrap(),2),("c".chars().next().unwrap(),1),("a".chars().next().unwrap(),2)]);
+assert_eq!(encode_runs("🚀🚀a"),vec![("🚀".chars().next().unwrap(),2),("a".chars().next().unwrap(),1)]);
+assert_eq!(encode_runs("éé"),vec![("é".chars().next().unwrap(),2)]);
+assert_eq!(encode_runs("éé"),vec![("e".chars().next().unwrap(),1),("́".chars().next().unwrap(),1),("e".chars().next().unwrap(),1),("́".chars().next().unwrap(),1)]);
+assert_eq!(encode_runs("  \n"),vec![(" ".chars().next().unwrap(),2),("\n".chars().next().unwrap(),1)]);
+assert_eq!(encode_runs("\0\0a"),vec![("\0".chars().next().unwrap(),2),("a".chars().next().unwrap(),1)]);
+assert_eq!(encode_runs("AaA"),vec![("A".chars().next().unwrap(),1),("a".chars().next().unwrap(),1),("A".chars().next().unwrap(),1)]);
+assert_eq!(encode_runs("ababa"),vec![("a".chars().next().unwrap(),1),("b".chars().next().unwrap(),1),("a".chars().next().unwrap(),1),("b".chars().next().unwrap(),1),("a".chars().next().unwrap(),1)]);
+assert_eq!(encode_runs("👩‍💻👩‍💻"),vec![("👩".chars().next().unwrap(),1),("‍".chars().next().unwrap(),1),("💻".chars().next().unwrap(),1),("👩".chars().next().unwrap(),1),("‍".chars().next().unwrap(),1),("💻".chars().next().unwrap(),1)]);
+assert_eq!(encode_runs("🇺🇸🇺🇸"),vec![("🇺".chars().next().unwrap(),1),("🇸".chars().next().unwrap(),1),("🇺".chars().next().unwrap(),1),("🇸".chars().next().unwrap(),1)]);
+assert_eq!(encode_runs("a️️"),vec![("a".chars().next().unwrap(),1),("️".chars().next().unwrap(),2)]);
+assert_eq!(encode_runs("\t\t\r\n"),vec![("\t".chars().next().unwrap(),2),("\r".chars().next().unwrap(),1),("\n".chars().next().unwrap(),1)]);
+assert_eq!(encode_runs("aba"),vec![("a".chars().next().unwrap(),1),("b".chars().next().unwrap(),1),("a".chars().next().unwrap(),1)]);
+assert_eq!(encode_runs("aabba"),vec![("a".chars().next().unwrap(),2),("b".chars().next().unwrap(),2),("a".chars().next().unwrap(),1)]);
+assert_eq!(encode_runs("aaabbba"),vec![("a".chars().next().unwrap(),3),("b".chars().next().unwrap(),3),("a".chars().next().unwrap(),1)]);
+assert_eq!(encode_runs("aaaabbbba"),vec![("a".chars().next().unwrap(),4),("b".chars().next().unwrap(),4),("a".chars().next().unwrap(),1)]);
+assert_eq!(encode_runs("aaaaabbbbba"),vec![("a".chars().next().unwrap(),5),("b".chars().next().unwrap(),5),("a".chars().next().unwrap(),1)]);
+assert_eq!(encode_runs("aaaaaabbbbbba"),vec![("a".chars().next().unwrap(),6),("b".chars().next().unwrap(),6),("a".chars().next().unwrap(),1)]);
+assert_eq!(encode_runs("aaaaaaabbbbbbba"),vec![("a".chars().next().unwrap(),7),("b".chars().next().unwrap(),7),("a".chars().next().unwrap(),1)]);
+assert_eq!(encode_runs("aaaaaaaabbbbbbbba"),vec![("a".chars().next().unwrap(),8),("b".chars().next().unwrap(),8),("a".chars().next().unwrap(),1)]);
+assert_eq!(encode_runs("aaaaaaaaabbbbbbbbba"),vec![("a".chars().next().unwrap(),9),("b".chars().next().unwrap(),9),("a".chars().next().unwrap(),1)]);
+assert_eq!(encode_runs("aaaaaaaaaabbbbbbbbbba"),vec![("a".chars().next().unwrap(),10),("b".chars().next().unwrap(),10),("a".chars().next().unwrap(),1)]);
+assert_eq!(encode_runs("aaaaaaaaaaabbbbbbbbbbba"),vec![("a".chars().next().unwrap(),11),("b".chars().next().unwrap(),11),("a".chars().next().unwrap(),1)]);
+assert_eq!(encode_runs("aaaaaaaaaaaabbbbbbbbbbbba"),vec![("a".chars().next().unwrap(),12),("b".chars().next().unwrap(),12),("a".chars().next().unwrap(),1)]);
+assert_eq!(encode_runs("aaaaaaaaaaaaabbbbbbbbbbbbba"),vec![("a".chars().next().unwrap(),13),("b".chars().next().unwrap(),13),("a".chars().next().unwrap(),1)]);
+assert_eq!(encode_runs("aaaaaaaaaaaaaabbbbbbbbbbbbbba"),vec![("a".chars().next().unwrap(),14),("b".chars().next().unwrap(),14),("a".chars().next().unwrap(),1)]);
+assert_eq!(encode_runs("aaaaaaaaaaaaaaabbbbbbbbbbbbbbba"),vec![("a".chars().next().unwrap(),15),("b".chars().next().unwrap(),15),("a".chars().next().unwrap(),1)]);
+assert_eq!(encode_runs("aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbba"),vec![("a".chars().next().unwrap(),16),("b".chars().next().unwrap(),16),("a".chars().next().unwrap(),1)]);
+assert_eq!(encode_runs("aaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbba"),vec![("a".chars().next().unwrap(),17),("b".chars().next().unwrap(),17),("a".chars().next().unwrap(),1)]);
+assert_eq!(encode_runs("aaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbba"),vec![("a".chars().next().unwrap(),18),("b".chars().next().unwrap(),18),("a".chars().next().unwrap(),1)]);
+assert_eq!(encode_runs("aaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbba"),vec![("a".chars().next().unwrap(),19),("b".chars().next().unwrap(),19),("a".chars().next().unwrap(),1)]);
+assert_eq!(encode_runs("aaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbba"),vec![("a".chars().next().unwrap(),20),("b".chars().next().unwrap(),20),("a".chars().next().unwrap(),1)]);
+assert_eq!(encode_runs("aaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbbba"),vec![("a".chars().next().unwrap(),21),("b".chars().next().unwrap(),21),("a".chars().next().unwrap(),1)]);
+let mut first=encode_runs("aa");first.clear();assert_eq!(encode_runs("aa"),vec![('a',2)]);
+}
