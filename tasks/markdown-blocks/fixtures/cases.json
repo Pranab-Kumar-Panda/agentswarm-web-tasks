@@ -1345,5 +1345,53 @@
       "a\ud800b"
     ],
     "error": "RangeError"
+  },
+  {
+    "input": [
+      "# a\u2028b"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "paragraph",
+          "text": "# a\u2028b",
+          "startLine": 1,
+          "endLine": 1
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "- a\u2029b"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "paragraph",
+          "text": "- a\u2029b",
+          "startLine": 1,
+          "endLine": 1
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "> a\u2028b"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "paragraph",
+          "text": "> a\u2028b",
+          "startLine": 1,
+          "endLine": 1
+        }
+      ]
+    }
   }
 ]
