@@ -1,0 +1,312 @@
+[
+  {
+    "input": "",
+    "expected": ""
+  },
+  {
+    "input": "?",
+    "expected": ""
+  },
+  {
+    "input": "&&",
+    "expected": ""
+  },
+  {
+    "input": "?&&",
+    "expected": ""
+  },
+  {
+    "input": "a",
+    "expected": "a="
+  },
+  {
+    "input": "=",
+    "expected": "="
+  },
+  {
+    "input": "=x&&flag",
+    "expected": "=x&flag="
+  },
+  {
+    "input": "??a=1",
+    "expected": "%3Fa=1"
+  },
+  {
+    "input": "?b=hello+world&a=%2f&a",
+    "expected": "a=&a=%2F&b=hello%20world"
+  },
+  {
+    "input": "x=a=b",
+    "expected": "x=a%3Db"
+  },
+  {
+    "input": "x=%2520",
+    "expected": "x=%2520"
+  },
+  {
+    "input": "x=%2b+",
+    "expected": "x=%2B%20"
+  },
+  {
+    "input": "a=1&a=1",
+    "expected": "a=1&a=1"
+  },
+  {
+    "input": "x=;#",
+    "expected": "x=%3B%23"
+  },
+  {
+    "input": "x=!'()*~",
+    "expected": "x=%21%27%28%29%2A~"
+  },
+  {
+    "input": "a=2&a=10&a=",
+    "expected": "a=&a=10&a=2"
+  },
+  {
+    "input": "b=1&A=2&a=3",
+    "expected": "A=2&a=3&b=1"
+  },
+  {
+    "input": "\u00e9=1&e\u0301=2",
+    "expected": "e%CC%81=2&%C3%A9=1"
+  },
+  {
+    "input": "\ud83d\ude00=1&\ue000=2",
+    "expected": "%F0%9F%98%80=1&%EE%80%80=2"
+  },
+  {
+    "input": "x=\ud83d\ude00&x=\ue000",
+    "expected": "x=%F0%9F%98%80&x=%EE%80%80"
+  },
+  {
+    "input": "x=%00",
+    "expected": "x=%00"
+  },
+  {
+    "input": "x=%7e",
+    "expected": "x=~"
+  },
+  {
+    "input": " x = y ",
+    "expected": "%20x%20=%20y%20"
+  },
+  {
+    "input": "z=0&a=20&z=0",
+    "expected": "a=20&z=0&z=0"
+  },
+  {
+    "input": "z=1&a=19&z=1",
+    "expected": "a=19&z=1&z=1"
+  },
+  {
+    "input": "z=2&a=18&z=2",
+    "expected": "a=18&z=2&z=2"
+  },
+  {
+    "input": "z=3&a=17&z=3",
+    "expected": "a=17&z=3&z=3"
+  },
+  {
+    "input": "z=4&a=16&z=4",
+    "expected": "a=16&z=4&z=4"
+  },
+  {
+    "input": "z=5&a=15&z=5",
+    "expected": "a=15&z=5&z=5"
+  },
+  {
+    "input": "z=6&a=14&z=6",
+    "expected": "a=14&z=6&z=6"
+  },
+  {
+    "input": "z=7&a=13&z=7",
+    "expected": "a=13&z=7&z=7"
+  },
+  {
+    "input": "z=8&a=12&z=8",
+    "expected": "a=12&z=8&z=8"
+  },
+  {
+    "input": "z=9&a=11&z=9",
+    "expected": "a=11&z=9&z=9"
+  },
+  {
+    "input": "z=10&a=10&z=10",
+    "expected": "a=10&z=10&z=10"
+  },
+  {
+    "input": "z=11&a=9&z=11",
+    "expected": "a=9&z=11&z=11"
+  },
+  {
+    "input": "z=12&a=8&z=12",
+    "expected": "a=8&z=12&z=12"
+  },
+  {
+    "input": "z=13&a=7&z=13",
+    "expected": "a=7&z=13&z=13"
+  },
+  {
+    "input": "z=14&a=6&z=14",
+    "expected": "a=6&z=14&z=14"
+  },
+  {
+    "input": "z=15&a=5&z=15",
+    "expected": "a=5&z=15&z=15"
+  },
+  {
+    "input": "z=16&a=4&z=16",
+    "expected": "a=4&z=16&z=16"
+  },
+  {
+    "input": "z=17&a=3&z=17",
+    "expected": "a=3&z=17&z=17"
+  },
+  {
+    "input": "z=18&a=2&z=18",
+    "expected": "a=2&z=18&z=18"
+  },
+  {
+    "input": "z=19&a=1&z=19",
+    "expected": "a=1&z=19&z=19"
+  },
+  {
+    "input": "x=%E6%9D%B1%E4%BA%AC",
+    "expected": "x=%E6%9D%B1%E4%BA%AC"
+  },
+  {
+    "input": "x=caf%C3%A9",
+    "expected": "x=caf%C3%A9"
+  },
+  {
+    "input": "x=%F0%9F%9A%80",
+    "expected": "x=%F0%9F%9A%80"
+  },
+  {
+    "input": "x=%2F%3F%3A%40",
+    "expected": "x=%2F%3F%3A%40"
+  },
+  {
+    "input": "x=a%2Bb",
+    "expected": "x=a%2Bb"
+  },
+  {
+    "input": "x=a%20b",
+    "expected": "x=a%20b"
+  },
+  {
+    "input": "x=__proto__",
+    "expected": "x=__proto__"
+  },
+  {
+    "input": "x=constructor",
+    "expected": "x=constructor"
+  },
+  {
+    "input": "x=%0A",
+    "expected": "x=%0A"
+  },
+  {
+    "input": "x=%09",
+    "expected": "x=%09"
+  },
+  {
+    "input": "x=%25",
+    "expected": "x=%25"
+  },
+  {
+    "input": "x=%5B%5D",
+    "expected": "x=%5B%5D"
+  },
+  {
+    "input": "x=a%26b",
+    "expected": "x=a%26b"
+  },
+  {
+    "input": "x=%C3%A9",
+    "expected": "x=%C3%A9"
+  },
+  {
+    "input": "x=e%CC%81",
+    "expected": "x=e%CC%81"
+  },
+  {
+    "input": "x=%",
+    "error": "URIError"
+  },
+  {
+    "input": "x=%0",
+    "error": "URIError"
+  },
+  {
+    "input": "x=%GG",
+    "error": "URIError"
+  },
+  {
+    "input": "%=1",
+    "error": "URIError"
+  },
+  {
+    "input": "x=%FF",
+    "error": "URIError"
+  },
+  {
+    "input": "x=%C0%AF",
+    "error": "URIError"
+  },
+  {
+    "input": "x=%ED%A0%80",
+    "error": "URIError"
+  },
+  {
+    "input": "x=%F4%90%80%80",
+    "error": "URIError"
+  },
+  {
+    "input": "x=%E2%82",
+    "error": "URIError"
+  },
+  {
+    "input": "x=%80",
+    "error": "URIError"
+  },
+  {
+    "input": "x=\ud800",
+    "error": "URIError"
+  },
+  {
+    "input": "\udfff=x",
+    "error": "URIError"
+  },
+  {
+    "input": "ok=1&bad=%zz",
+    "error": "URIError"
+  },
+  {
+    "input": null,
+    "error": "TypeError"
+  },
+  {
+    "input": true,
+    "error": "TypeError"
+  },
+  {
+    "input": 1,
+    "error": "TypeError"
+  },
+  {
+    "input": [],
+    "error": "TypeError"
+  },
+  {
+    "input": {},
+    "error": "TypeError"
+  },
+  {
+    "input": [
+      "x"
+    ],
+    "error": "TypeError"
+  }
+]
