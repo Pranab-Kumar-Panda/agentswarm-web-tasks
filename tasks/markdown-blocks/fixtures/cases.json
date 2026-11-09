@@ -1,0 +1,1349 @@
+[
+  {
+    "input": [
+      ""
+    ],
+    "expected": {
+      "type": "document",
+      "children": []
+    }
+  },
+  {
+    "input": [
+      "# Hi\nthere"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "heading",
+          "depth": 1,
+          "text": "Hi",
+          "startLine": 1,
+          "endLine": 1
+        },
+        {
+          "type": "paragraph",
+          "text": "there",
+          "startLine": 2,
+          "endLine": 2
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "- a\n- b\n"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "list",
+          "items": [
+            "a",
+            "b"
+          ],
+          "startLine": 1,
+          "endLine": 2
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "```\nx\n```"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "code",
+          "text": "x",
+          "startLine": 1,
+          "endLine": 3
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "\n"
+    ],
+    "expected": {
+      "type": "document",
+      "children": []
+    }
+  },
+  {
+    "input": [
+      "\n\n"
+    ],
+    "expected": {
+      "type": "document",
+      "children": []
+    }
+  },
+  {
+    "input": [
+      "## Title"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "heading",
+          "depth": 2,
+          "text": "Title",
+          "startLine": 1,
+          "endLine": 1
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "### Third"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "heading",
+          "depth": 3,
+          "text": "Third",
+          "startLine": 1,
+          "endLine": 1
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "#### Plain"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "paragraph",
+          "text": "#### Plain",
+          "startLine": 1,
+          "endLine": 1
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "# "
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "paragraph",
+          "text": "# ",
+          "startLine": 1,
+          "endLine": 1
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "#  padded "
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "heading",
+          "depth": 1,
+          "text": " padded ",
+          "startLine": 1,
+          "endLine": 1
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "- "
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "paragraph",
+          "text": "- ",
+          "startLine": 1,
+          "endLine": 1
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "> "
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "paragraph",
+          "text": "> ",
+          "startLine": 1,
+          "endLine": 1
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "> a\n> b"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "quote",
+          "text": "a b",
+          "startLine": 1,
+          "endLine": 2
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "a\nb\n\nc"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "paragraph",
+          "text": "a b",
+          "startLine": 1,
+          "endLine": 2
+        },
+        {
+          "type": "paragraph",
+          "text": "c",
+          "startLine": 4,
+          "endLine": 4
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "```\n```"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "code",
+          "text": "",
+          "startLine": 1,
+          "endLine": 2
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "```\n\n```"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "code",
+          "text": "",
+          "startLine": 1,
+          "endLine": 3
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "```\n# literal\n- literal\n\n```"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "code",
+          "text": "# literal\n- literal\n",
+          "startLine": 1,
+          "endLine": 5
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "```js\na"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "paragraph",
+          "text": "```js a",
+          "startLine": 1,
+          "endLine": 2
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "a\r\nb\r\n"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "paragraph",
+          "text": "a b",
+          "startLine": 1,
+          "endLine": 2
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "a\rb"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "```"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "```\nx"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "  "
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "paragraph",
+          "text": "  ",
+          "startLine": 1,
+          "endLine": 1
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "a\n \nb"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "paragraph",
+          "text": "a   b",
+          "startLine": 1,
+          "endLine": 3
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "\t# no"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "paragraph",
+          "text": "\t# no",
+          "startLine": 1,
+          "endLine": 1
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      " - no"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "paragraph",
+          "text": " - no",
+          "startLine": 1,
+          "endLine": 1
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "#\tno"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "paragraph",
+          "text": "#\tno",
+          "startLine": 1,
+          "endLine": 1
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "-\tno"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "paragraph",
+          "text": "-\tno",
+          "startLine": 1,
+          "endLine": 1
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      ">\tno"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "paragraph",
+          "text": ">\tno",
+          "startLine": 1,
+          "endLine": 1
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "a *b* `c`"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "paragraph",
+          "text": "a *b* `c`",
+          "startLine": 1,
+          "endLine": 1
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "\u00e9\ne\u0301"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "paragraph",
+          "text": "\u00e9 e\u0301",
+          "startLine": 1,
+          "endLine": 2
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "\ud83d\ude80\n\ud83d\ude80"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "paragraph",
+          "text": "\ud83d\ude80 \ud83d\ude80",
+          "startLine": 1,
+          "endLine": 2
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "a\u0000b"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "paragraph",
+          "text": "a\u0000b",
+          "startLine": 1,
+          "endLine": 1
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "a\u2028b"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "paragraph",
+          "text": "a\u2028b",
+          "startLine": 1,
+          "endLine": 1
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "a\u2029b"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "paragraph",
+          "text": "a\u2029b",
+          "startLine": 1,
+          "endLine": 1
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "# H\n# H"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "heading",
+          "depth": 1,
+          "text": "H",
+          "startLine": 1,
+          "endLine": 1
+        },
+        {
+          "type": "heading",
+          "depth": 1,
+          "text": "H",
+          "startLine": 2,
+          "endLine": 2
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "# H\n- a"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "heading",
+          "depth": 1,
+          "text": "H",
+          "startLine": 1,
+          "endLine": 1
+        },
+        {
+          "type": "list",
+          "items": [
+            "a"
+          ],
+          "startLine": 2,
+          "endLine": 2
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "# H\n> a"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "heading",
+          "depth": 1,
+          "text": "H",
+          "startLine": 1,
+          "endLine": 1
+        },
+        {
+          "type": "quote",
+          "text": "a",
+          "startLine": 2,
+          "endLine": 2
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "# H\npara"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "heading",
+          "depth": 1,
+          "text": "H",
+          "startLine": 1,
+          "endLine": 1
+        },
+        {
+          "type": "paragraph",
+          "text": "para",
+          "startLine": 2,
+          "endLine": 2
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "# H\n\n"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "heading",
+          "depth": 1,
+          "text": "H",
+          "startLine": 1,
+          "endLine": 1
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "## H\n# H"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "heading",
+          "depth": 2,
+          "text": "H",
+          "startLine": 1,
+          "endLine": 1
+        },
+        {
+          "type": "heading",
+          "depth": 1,
+          "text": "H",
+          "startLine": 2,
+          "endLine": 2
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "## H\n- a"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "heading",
+          "depth": 2,
+          "text": "H",
+          "startLine": 1,
+          "endLine": 1
+        },
+        {
+          "type": "list",
+          "items": [
+            "a"
+          ],
+          "startLine": 2,
+          "endLine": 2
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "## H\n> a"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "heading",
+          "depth": 2,
+          "text": "H",
+          "startLine": 1,
+          "endLine": 1
+        },
+        {
+          "type": "quote",
+          "text": "a",
+          "startLine": 2,
+          "endLine": 2
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "## H\npara"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "heading",
+          "depth": 2,
+          "text": "H",
+          "startLine": 1,
+          "endLine": 1
+        },
+        {
+          "type": "paragraph",
+          "text": "para",
+          "startLine": 2,
+          "endLine": 2
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "## H\n\n"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "heading",
+          "depth": 2,
+          "text": "H",
+          "startLine": 1,
+          "endLine": 1
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "### H\n# H"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "heading",
+          "depth": 3,
+          "text": "H",
+          "startLine": 1,
+          "endLine": 1
+        },
+        {
+          "type": "heading",
+          "depth": 1,
+          "text": "H",
+          "startLine": 2,
+          "endLine": 2
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "### H\n- a"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "heading",
+          "depth": 3,
+          "text": "H",
+          "startLine": 1,
+          "endLine": 1
+        },
+        {
+          "type": "list",
+          "items": [
+            "a"
+          ],
+          "startLine": 2,
+          "endLine": 2
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "### H\n> a"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "heading",
+          "depth": 3,
+          "text": "H",
+          "startLine": 1,
+          "endLine": 1
+        },
+        {
+          "type": "quote",
+          "text": "a",
+          "startLine": 2,
+          "endLine": 2
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "### H\npara"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "heading",
+          "depth": 3,
+          "text": "H",
+          "startLine": 1,
+          "endLine": 1
+        },
+        {
+          "type": "paragraph",
+          "text": "para",
+          "startLine": 2,
+          "endLine": 2
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "### H\n\n"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "heading",
+          "depth": 3,
+          "text": "H",
+          "startLine": 1,
+          "endLine": 1
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "- a\n# H"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "list",
+          "items": [
+            "a"
+          ],
+          "startLine": 1,
+          "endLine": 1
+        },
+        {
+          "type": "heading",
+          "depth": 1,
+          "text": "H",
+          "startLine": 2,
+          "endLine": 2
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "- a\n- a"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "list",
+          "items": [
+            "a",
+            "a"
+          ],
+          "startLine": 1,
+          "endLine": 2
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "- a\n> a"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "list",
+          "items": [
+            "a"
+          ],
+          "startLine": 1,
+          "endLine": 1
+        },
+        {
+          "type": "quote",
+          "text": "a",
+          "startLine": 2,
+          "endLine": 2
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "- a\npara"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "list",
+          "items": [
+            "a"
+          ],
+          "startLine": 1,
+          "endLine": 1
+        },
+        {
+          "type": "paragraph",
+          "text": "para",
+          "startLine": 2,
+          "endLine": 2
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "- a\n\n"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "list",
+          "items": [
+            "a"
+          ],
+          "startLine": 1,
+          "endLine": 1
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "> a\n# H"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "quote",
+          "text": "a",
+          "startLine": 1,
+          "endLine": 1
+        },
+        {
+          "type": "heading",
+          "depth": 1,
+          "text": "H",
+          "startLine": 2,
+          "endLine": 2
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "> a\n- a"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "quote",
+          "text": "a",
+          "startLine": 1,
+          "endLine": 1
+        },
+        {
+          "type": "list",
+          "items": [
+            "a"
+          ],
+          "startLine": 2,
+          "endLine": 2
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "> a\n> a"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "quote",
+          "text": "a a",
+          "startLine": 1,
+          "endLine": 2
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "> a\npara"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "quote",
+          "text": "a",
+          "startLine": 1,
+          "endLine": 1
+        },
+        {
+          "type": "paragraph",
+          "text": "para",
+          "startLine": 2,
+          "endLine": 2
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "> a\n\n"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "quote",
+          "text": "a",
+          "startLine": 1,
+          "endLine": 1
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "para\n# H"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "paragraph",
+          "text": "para",
+          "startLine": 1,
+          "endLine": 1
+        },
+        {
+          "type": "heading",
+          "depth": 1,
+          "text": "H",
+          "startLine": 2,
+          "endLine": 2
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "para\n- a"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "paragraph",
+          "text": "para",
+          "startLine": 1,
+          "endLine": 1
+        },
+        {
+          "type": "list",
+          "items": [
+            "a"
+          ],
+          "startLine": 2,
+          "endLine": 2
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "para\n> a"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "paragraph",
+          "text": "para",
+          "startLine": 1,
+          "endLine": 1
+        },
+        {
+          "type": "quote",
+          "text": "a",
+          "startLine": 2,
+          "endLine": 2
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "para\npara"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "paragraph",
+          "text": "para para",
+          "startLine": 1,
+          "endLine": 2
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "para\n\n"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "paragraph",
+          "text": "para",
+          "startLine": 1,
+          "endLine": 1
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "```\nx\n```\n# H"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "code",
+          "text": "x",
+          "startLine": 1,
+          "endLine": 3
+        },
+        {
+          "type": "heading",
+          "depth": 1,
+          "text": "H",
+          "startLine": 4,
+          "endLine": 4
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "```\nx\n```\n- a"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "code",
+          "text": "x",
+          "startLine": 1,
+          "endLine": 3
+        },
+        {
+          "type": "list",
+          "items": [
+            "a"
+          ],
+          "startLine": 4,
+          "endLine": 4
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "```\nx\n```\n> a"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "code",
+          "text": "x",
+          "startLine": 1,
+          "endLine": 3
+        },
+        {
+          "type": "quote",
+          "text": "a",
+          "startLine": 4,
+          "endLine": 4
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "```\nx\n```\npara"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "code",
+          "text": "x",
+          "startLine": 1,
+          "endLine": 3
+        },
+        {
+          "type": "paragraph",
+          "text": "para",
+          "startLine": 4,
+          "endLine": 4
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "```\nx\n```\n\n"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "code",
+          "text": "x",
+          "startLine": 1,
+          "endLine": 3
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      null
+    ],
+    "error": "TypeError"
+  },
+  {
+    "input": [
+      true
+    ],
+    "error": "TypeError"
+  },
+  {
+    "input": [
+      1
+    ],
+    "error": "TypeError"
+  },
+  {
+    "input": [
+      []
+    ],
+    "error": "TypeError"
+  },
+  {
+    "input": [
+      {}
+    ],
+    "error": "TypeError"
+  },
+  {
+    "input": [
+      "\ud800"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "\udfff"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "a\ud800b"
+    ],
+    "error": "RangeError"
+  }
+]
