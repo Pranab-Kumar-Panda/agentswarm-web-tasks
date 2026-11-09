@@ -162,6 +162,27 @@
   },
   {
     "input": [
+      "0.1.0",
+      "^0.0.999"
+    ],
+    "expected": false
+  },
+  {
+    "input": [
+      "1.0.0",
+      "^0.999.999"
+    ],
+    "expected": false
+  },
+  {
+    "input": [
+      "2.0.0",
+      "~1.999.0"
+    ],
+    "expected": false
+  },
+  {
+    "input": [
       "1.2.2",
       "1.2.3"
     ],
@@ -541,6 +562,48 @@
   {
     "input": [
       "\uff11.2.3",
+      "*"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "1.\u0662.3",
+      "*"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "1.2.\uff13",
+      "*"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "+1.2.3",
+      "*"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "1.2.3\t",
+      "*"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "1.2.3\r",
+      "*"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "1.2.3\u00a0",
       "*"
     ],
     "error": "RangeError"
