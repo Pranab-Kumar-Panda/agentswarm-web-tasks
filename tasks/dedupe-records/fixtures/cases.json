@@ -1,0 +1,101 @@
+[
+  {
+    "args": [
+      []
+    ],
+    "expected": []
+  },
+  {
+    "args": [
+      [
+        {
+          "key": "a",
+          "value": "1"
+        },
+        {
+          "key": "b",
+          "value": "2"
+        },
+        {
+          "key": "a",
+          "value": "3"
+        }
+      ]
+    ],
+    "expected": [
+      {
+        "key": "a",
+        "value": "1"
+      },
+      {
+        "key": "b",
+        "value": "2"
+      }
+    ]
+  },
+  {
+    "args": [
+      [
+        {
+          "key": "",
+          "value": ""
+        },
+        {
+          "key": "",
+          "value": "x"
+        }
+      ]
+    ],
+    "expected": [
+      {
+        "key": "",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "args": [
+      [
+        {
+          "key": "b",
+          "value": "x"
+        },
+        {
+          "key": "a",
+          "value": "y"
+        }
+      ]
+    ],
+    "expected": [
+      {
+        "key": "b",
+        "value": "x"
+      },
+      {
+        "key": "a",
+        "value": "y"
+      }
+    ]
+  },
+  {
+    "args": [
+      [
+        {
+          "key": "x",
+          "value": 1
+        }
+      ]
+    ],
+    "error": "TypeError"
+  },
+  {
+    "args": [
+      [
+        {
+          "key": "x"
+        }
+      ]
+    ],
+    "error": "TypeError"
+  }
+]
