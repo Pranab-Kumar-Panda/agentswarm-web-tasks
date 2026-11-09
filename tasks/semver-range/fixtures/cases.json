@@ -1,0 +1,793 @@
+[
+  {
+    "input": [
+      "1.9.0",
+      "^1.2.3"
+    ],
+    "expected": true
+  },
+  {
+    "input": [
+      "2.0.0",
+      "^1.2.3"
+    ],
+    "expected": false
+  },
+  {
+    "input": [
+      "0.2.9",
+      "^0.2.3"
+    ],
+    "expected": true
+  },
+  {
+    "input": [
+      "0.3.0",
+      "^0.2.3"
+    ],
+    "expected": false
+  },
+  {
+    "input": [
+      "0.0.4",
+      "^0.0.3"
+    ],
+    "expected": false
+  },
+  {
+    "input": [
+      "1.5.0",
+      ">=1.2.3 <2.0.0"
+    ],
+    "expected": true
+  },
+  {
+    "input": [
+      "1.2.3",
+      " >2.0.0 <1.0.0 "
+    ],
+    "expected": false
+  },
+  {
+    "input": [
+      "1.2.3",
+      "\t>=1.0.0\t<2.0.0 "
+    ],
+    "expected": true
+  },
+  {
+    "input": [
+      "999.999.999",
+      "^999.999.999"
+    ],
+    "expected": true
+  },
+  {
+    "input": [
+      "999.999.999",
+      "~999.999.999"
+    ],
+    "expected": true
+  },
+  {
+    "input": [
+      "0.999.999",
+      "^0.999.999"
+    ],
+    "expected": true
+  },
+  {
+    "input": [
+      "0.0.999",
+      "^0.0.999"
+    ],
+    "expected": true
+  },
+  {
+    "input": [
+      "0.0.0",
+      "^0.0.0"
+    ],
+    "expected": true
+  },
+  {
+    "input": [
+      "0.0.1",
+      "^0.0.0"
+    ],
+    "expected": false
+  },
+  {
+    "input": [
+      "1.2.3",
+      ">=1.0.0 <1.2.0"
+    ],
+    "expected": false
+  },
+  {
+    "input": [
+      "1.2.3",
+      ">1.2.3 <=2.0.0"
+    ],
+    "expected": false
+  },
+  {
+    "input": [
+      "1.3.0",
+      "~1.2.3"
+    ],
+    "expected": false
+  },
+  {
+    "input": [
+      "1.2.999",
+      "~1.2.3"
+    ],
+    "expected": true
+  },
+  {
+    "input": [
+      "1.2.2",
+      "~1.2.3"
+    ],
+    "expected": false
+  },
+  {
+    "input": [
+      "0.2.3",
+      "^0.2.3"
+    ],
+    "expected": true
+  },
+  {
+    "input": [
+      "0.2.2",
+      "^0.2.3"
+    ],
+    "expected": false
+  },
+  {
+    "input": [
+      "0.0.3",
+      "^0.0.3"
+    ],
+    "expected": true
+  },
+  {
+    "input": [
+      "0.0.2",
+      "^0.0.3"
+    ],
+    "expected": false
+  },
+  {
+    "input": [
+      "1.2.2",
+      "1.2.3"
+    ],
+    "expected": false
+  },
+  {
+    "input": [
+      "1.2.2",
+      "=1.2.3"
+    ],
+    "expected": false
+  },
+  {
+    "input": [
+      "1.2.2",
+      ">1.2.3"
+    ],
+    "expected": false
+  },
+  {
+    "input": [
+      "1.2.2",
+      ">=1.2.3"
+    ],
+    "expected": false
+  },
+  {
+    "input": [
+      "1.2.2",
+      "<1.2.3"
+    ],
+    "expected": true
+  },
+  {
+    "input": [
+      "1.2.2",
+      "<=1.2.3"
+    ],
+    "expected": true
+  },
+  {
+    "input": [
+      "1.2.2",
+      "~1.2.3"
+    ],
+    "expected": false
+  },
+  {
+    "input": [
+      "1.2.2",
+      "^1.2.3"
+    ],
+    "expected": false
+  },
+  {
+    "input": [
+      "1.2.3",
+      "1.2.3"
+    ],
+    "expected": true
+  },
+  {
+    "input": [
+      "1.2.3",
+      "=1.2.3"
+    ],
+    "expected": true
+  },
+  {
+    "input": [
+      "1.2.3",
+      ">1.2.3"
+    ],
+    "expected": false
+  },
+  {
+    "input": [
+      "1.2.3",
+      ">=1.2.3"
+    ],
+    "expected": true
+  },
+  {
+    "input": [
+      "1.2.3",
+      "<1.2.3"
+    ],
+    "expected": false
+  },
+  {
+    "input": [
+      "1.2.3",
+      "<=1.2.3"
+    ],
+    "expected": true
+  },
+  {
+    "input": [
+      "1.2.3",
+      "~1.2.3"
+    ],
+    "expected": true
+  },
+  {
+    "input": [
+      "1.2.3",
+      "^1.2.3"
+    ],
+    "expected": true
+  },
+  {
+    "input": [
+      "1.2.4",
+      "1.2.3"
+    ],
+    "expected": false
+  },
+  {
+    "input": [
+      "1.2.4",
+      "=1.2.3"
+    ],
+    "expected": false
+  },
+  {
+    "input": [
+      "1.2.4",
+      ">1.2.3"
+    ],
+    "expected": true
+  },
+  {
+    "input": [
+      "1.2.4",
+      ">=1.2.3"
+    ],
+    "expected": true
+  },
+  {
+    "input": [
+      "1.2.4",
+      "<1.2.3"
+    ],
+    "expected": false
+  },
+  {
+    "input": [
+      "1.2.4",
+      "<=1.2.3"
+    ],
+    "expected": false
+  },
+  {
+    "input": [
+      "1.2.4",
+      "~1.2.3"
+    ],
+    "expected": true
+  },
+  {
+    "input": [
+      "1.2.4",
+      "^1.2.3"
+    ],
+    "expected": true
+  },
+  {
+    "input": [
+      "1.10.0",
+      "1.2.3"
+    ],
+    "expected": false
+  },
+  {
+    "input": [
+      "1.10.0",
+      "=1.2.3"
+    ],
+    "expected": false
+  },
+  {
+    "input": [
+      "1.10.0",
+      ">1.2.3"
+    ],
+    "expected": true
+  },
+  {
+    "input": [
+      "1.10.0",
+      ">=1.2.3"
+    ],
+    "expected": true
+  },
+  {
+    "input": [
+      "1.10.0",
+      "<1.2.3"
+    ],
+    "expected": false
+  },
+  {
+    "input": [
+      "1.10.0",
+      "<=1.2.3"
+    ],
+    "expected": false
+  },
+  {
+    "input": [
+      "1.10.0",
+      "~1.2.3"
+    ],
+    "expected": false
+  },
+  {
+    "input": [
+      "1.10.0",
+      "^1.2.3"
+    ],
+    "expected": true
+  },
+  {
+    "input": [
+      "0.999.999",
+      "1.2.3"
+    ],
+    "expected": false
+  },
+  {
+    "input": [
+      "0.999.999",
+      "=1.2.3"
+    ],
+    "expected": false
+  },
+  {
+    "input": [
+      "0.999.999",
+      ">1.2.3"
+    ],
+    "expected": false
+  },
+  {
+    "input": [
+      "0.999.999",
+      ">=1.2.3"
+    ],
+    "expected": false
+  },
+  {
+    "input": [
+      "0.999.999",
+      "<1.2.3"
+    ],
+    "expected": true
+  },
+  {
+    "input": [
+      "0.999.999",
+      "<=1.2.3"
+    ],
+    "expected": true
+  },
+  {
+    "input": [
+      "0.999.999",
+      "~1.2.3"
+    ],
+    "expected": false
+  },
+  {
+    "input": [
+      "0.999.999",
+      "^1.2.3"
+    ],
+    "expected": false
+  },
+  {
+    "input": [
+      "0.0.0",
+      "*"
+    ],
+    "expected": true
+  },
+  {
+    "input": [
+      "999.999.999",
+      "*"
+    ],
+    "expected": true
+  },
+  {
+    "input": [
+      "1.2.3",
+      "*"
+    ],
+    "expected": true
+  },
+  {
+    "input": [
+      "1",
+      "*"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "1.2",
+      "*"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "1.2.3.4",
+      "*"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "01.2.3",
+      "*"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "1.02.3",
+      "*"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "1.2.03",
+      "*"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "1000.0.0",
+      "*"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "-1.0.0",
+      "*"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "v1.0.0",
+      "*"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "1.2.3-a",
+      "*"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "1.2.3+x",
+      "*"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "\uff11.2.3",
+      "*"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "1.2.3\n",
+      "*"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      " 1.2.3",
+      "*"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "1.2.3 ",
+      "*"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "1.2.3",
+      ""
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "1.2.3",
+      " "
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "1.2.3",
+      "\n*"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "1.2.3",
+      "*\n"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "1.2.3",
+      "\u00a0*"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "1.2.3",
+      "* 1.0.0"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "1.2.3",
+      ">= 1.2.3"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "1.2.3",
+      ">=1.2.3<2.0.0"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "1.2.3",
+      "1.2.3||2.0.0"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "1.2.3",
+      "1.2.3,2.0.0"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "1.2.3",
+      "1.2.3 - 2.0.0"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "1.2.3",
+      "1.2.x"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "1.2.3",
+      "==1.2.3"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "1.2.3",
+      "~ 1.2.3"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "1.2.3",
+      ">=2.0.0 BAD"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "1.2.3",
+      ">2.0.0 1.2.3\n"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "1.2.3",
+      ">2.0.0 <01.0.0"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "1.2.3",
+      "1.2.3\r"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "1.2.3",
+      "1.2.3\u00a0"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "1.2.3",
+      "1.2.3\n<2.0.0"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "1.2.3",
+      "~1.999.1000"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      null,
+      "*"
+    ],
+    "error": "TypeError"
+  },
+  {
+    "input": [
+      true,
+      "*"
+    ],
+    "error": "TypeError"
+  },
+  {
+    "input": [
+      1,
+      "*"
+    ],
+    "error": "TypeError"
+  },
+  {
+    "input": [
+      [],
+      "*"
+    ],
+    "error": "TypeError"
+  },
+  {
+    "input": [
+      {},
+      "*"
+    ],
+    "error": "TypeError"
+  },
+  {
+    "input": [
+      "1.2.3",
+      null
+    ],
+    "error": "TypeError"
+  },
+  {
+    "input": [
+      "1.2.3",
+      true
+    ],
+    "error": "TypeError"
+  },
+  {
+    "input": [
+      "1.2.3",
+      1
+    ],
+    "error": "TypeError"
+  },
+  {
+    "input": [
+      "1.2.3",
+      []
+    ],
+    "error": "TypeError"
+  },
+  {
+    "input": [
+      "1.2.3",
+      {}
+    ],
+    "error": "TypeError"
+  },
+  {
+    "input": [
+      "bad",
+      null
+    ],
+    "error": "TypeError"
+  }
+]
