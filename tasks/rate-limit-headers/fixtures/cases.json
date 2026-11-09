@@ -1,0 +1,1646 @@
+[
+  {
+    "input": [],
+    "expected": {
+      "limit": null,
+      "remaining": null,
+      "reset": null,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Limit",
+        "12"
+      ]
+    ],
+    "expected": {
+      "limit": 12,
+      "remaining": null,
+      "reset": null,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RATELIMIT-LIMIT",
+        "12"
+      ]
+    ],
+    "expected": {
+      "limit": 12,
+      "remaining": null,
+      "reset": null,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "x-ratelimit-limit",
+        "12"
+      ]
+    ],
+    "expected": {
+      "limit": 12,
+      "remaining": null,
+      "reset": null,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Limit",
+        "0"
+      ]
+    ],
+    "expected": {
+      "limit": 0,
+      "remaining": null,
+      "reset": null,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Limit",
+        " \t42\t "
+      ]
+    ],
+    "expected": {
+      "limit": 42,
+      "remaining": null,
+      "reset": null,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Limit",
+        "9007199254740991"
+      ]
+    ],
+    "expected": {
+      "limit": 9007199254740991,
+      "remaining": null,
+      "reset": null,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Limit",
+        "7"
+      ],
+      [
+        "X-RateLimit-Limit",
+        ""
+      ]
+    ],
+    "expected": {
+      "limit": 7,
+      "remaining": null,
+      "reset": null,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Limit",
+        "7"
+      ],
+      [
+        "X-RateLimit-Limit",
+        "01"
+      ]
+    ],
+    "expected": {
+      "limit": 7,
+      "remaining": null,
+      "reset": null,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Limit",
+        "7"
+      ],
+      [
+        "X-RateLimit-Limit",
+        "-1"
+      ]
+    ],
+    "expected": {
+      "limit": 7,
+      "remaining": null,
+      "reset": null,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Limit",
+        "7"
+      ],
+      [
+        "X-RateLimit-Limit",
+        "+1"
+      ]
+    ],
+    "expected": {
+      "limit": 7,
+      "remaining": null,
+      "reset": null,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Limit",
+        "7"
+      ],
+      [
+        "X-RateLimit-Limit",
+        "1.0"
+      ]
+    ],
+    "expected": {
+      "limit": 7,
+      "remaining": null,
+      "reset": null,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Limit",
+        "7"
+      ],
+      [
+        "X-RateLimit-Limit",
+        "1e2"
+      ]
+    ],
+    "expected": {
+      "limit": 7,
+      "remaining": null,
+      "reset": null,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Limit",
+        "7"
+      ],
+      [
+        "X-RateLimit-Limit",
+        "1,2"
+      ]
+    ],
+    "expected": {
+      "limit": 7,
+      "remaining": null,
+      "reset": null,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Limit",
+        "7"
+      ],
+      [
+        "X-RateLimit-Limit",
+        "１"
+      ]
+    ],
+    "expected": {
+      "limit": 7,
+      "remaining": null,
+      "reset": null,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Limit",
+        "7"
+      ],
+      [
+        "X-RateLimit-Limit",
+        "١"
+      ]
+    ],
+    "expected": {
+      "limit": 7,
+      "remaining": null,
+      "reset": null,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Limit",
+        "7"
+      ],
+      [
+        "X-RateLimit-Limit",
+        "1\n"
+      ]
+    ],
+    "expected": {
+      "limit": 7,
+      "remaining": null,
+      "reset": null,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Limit",
+        "7"
+      ],
+      [
+        "X-RateLimit-Limit",
+        "\n1"
+      ]
+    ],
+    "expected": {
+      "limit": 7,
+      "remaining": null,
+      "reset": null,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Limit",
+        "7"
+      ],
+      [
+        "X-RateLimit-Limit",
+        " 1"
+      ]
+    ],
+    "expected": {
+      "limit": 7,
+      "remaining": null,
+      "reset": null,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Limit",
+        "7"
+      ],
+      [
+        "X-RateLimit-Limit",
+        "9007199254740992"
+      ]
+    ],
+    "expected": {
+      "limit": 7,
+      "remaining": null,
+      "reset": null,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Limit",
+        "7"
+      ],
+      [
+        "X-RateLimit-Limit",
+        "Wed, 21 Oct 2015 07:28:00 GMT"
+      ]
+    ],
+    "expected": {
+      "limit": 7,
+      "remaining": null,
+      "reset": null,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Limit",
+        "3"
+      ],
+      [
+        "X-RateLimit-Limit",
+        "4"
+      ]
+    ],
+    "expected": {
+      "limit": 4,
+      "remaining": null,
+      "reset": null,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Remaining",
+        "12"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": 12,
+      "reset": null,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RATELIMIT-REMAINING",
+        "12"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": 12,
+      "reset": null,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "x-ratelimit-remaining",
+        "12"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": 12,
+      "reset": null,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Remaining",
+        "0"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": 0,
+      "reset": null,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Remaining",
+        " \t42\t "
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": 42,
+      "reset": null,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Remaining",
+        "9007199254740991"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": 9007199254740991,
+      "reset": null,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Remaining",
+        "7"
+      ],
+      [
+        "X-RateLimit-Remaining",
+        ""
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": 7,
+      "reset": null,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Remaining",
+        "7"
+      ],
+      [
+        "X-RateLimit-Remaining",
+        "01"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": 7,
+      "reset": null,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Remaining",
+        "7"
+      ],
+      [
+        "X-RateLimit-Remaining",
+        "-1"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": 7,
+      "reset": null,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Remaining",
+        "7"
+      ],
+      [
+        "X-RateLimit-Remaining",
+        "+1"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": 7,
+      "reset": null,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Remaining",
+        "7"
+      ],
+      [
+        "X-RateLimit-Remaining",
+        "1.0"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": 7,
+      "reset": null,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Remaining",
+        "7"
+      ],
+      [
+        "X-RateLimit-Remaining",
+        "1e2"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": 7,
+      "reset": null,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Remaining",
+        "7"
+      ],
+      [
+        "X-RateLimit-Remaining",
+        "1,2"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": 7,
+      "reset": null,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Remaining",
+        "7"
+      ],
+      [
+        "X-RateLimit-Remaining",
+        "１"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": 7,
+      "reset": null,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Remaining",
+        "7"
+      ],
+      [
+        "X-RateLimit-Remaining",
+        "١"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": 7,
+      "reset": null,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Remaining",
+        "7"
+      ],
+      [
+        "X-RateLimit-Remaining",
+        "1\n"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": 7,
+      "reset": null,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Remaining",
+        "7"
+      ],
+      [
+        "X-RateLimit-Remaining",
+        "\n1"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": 7,
+      "reset": null,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Remaining",
+        "7"
+      ],
+      [
+        "X-RateLimit-Remaining",
+        " 1"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": 7,
+      "reset": null,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Remaining",
+        "7"
+      ],
+      [
+        "X-RateLimit-Remaining",
+        "9007199254740992"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": 7,
+      "reset": null,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Remaining",
+        "7"
+      ],
+      [
+        "X-RateLimit-Remaining",
+        "Wed, 21 Oct 2015 07:28:00 GMT"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": 7,
+      "reset": null,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Remaining",
+        "3"
+      ],
+      [
+        "X-RateLimit-Remaining",
+        "4"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": 4,
+      "reset": null,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Reset",
+        "12"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": null,
+      "reset": 12,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RATELIMIT-RESET",
+        "12"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": null,
+      "reset": 12,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "x-ratelimit-reset",
+        "12"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": null,
+      "reset": 12,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Reset",
+        "0"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": null,
+      "reset": 0,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Reset",
+        " \t42\t "
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": null,
+      "reset": 42,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Reset",
+        "9007199254740991"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": null,
+      "reset": 9007199254740991,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Reset",
+        "7"
+      ],
+      [
+        "X-RateLimit-Reset",
+        ""
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": null,
+      "reset": 7,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Reset",
+        "7"
+      ],
+      [
+        "X-RateLimit-Reset",
+        "01"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": null,
+      "reset": 7,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Reset",
+        "7"
+      ],
+      [
+        "X-RateLimit-Reset",
+        "-1"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": null,
+      "reset": 7,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Reset",
+        "7"
+      ],
+      [
+        "X-RateLimit-Reset",
+        "+1"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": null,
+      "reset": 7,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Reset",
+        "7"
+      ],
+      [
+        "X-RateLimit-Reset",
+        "1.0"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": null,
+      "reset": 7,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Reset",
+        "7"
+      ],
+      [
+        "X-RateLimit-Reset",
+        "1e2"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": null,
+      "reset": 7,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Reset",
+        "7"
+      ],
+      [
+        "X-RateLimit-Reset",
+        "1,2"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": null,
+      "reset": 7,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Reset",
+        "7"
+      ],
+      [
+        "X-RateLimit-Reset",
+        "１"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": null,
+      "reset": 7,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Reset",
+        "7"
+      ],
+      [
+        "X-RateLimit-Reset",
+        "١"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": null,
+      "reset": 7,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Reset",
+        "7"
+      ],
+      [
+        "X-RateLimit-Reset",
+        "1\n"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": null,
+      "reset": 7,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Reset",
+        "7"
+      ],
+      [
+        "X-RateLimit-Reset",
+        "\n1"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": null,
+      "reset": 7,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Reset",
+        "7"
+      ],
+      [
+        "X-RateLimit-Reset",
+        " 1"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": null,
+      "reset": 7,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Reset",
+        "7"
+      ],
+      [
+        "X-RateLimit-Reset",
+        "9007199254740992"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": null,
+      "reset": 7,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Reset",
+        "7"
+      ],
+      [
+        "X-RateLimit-Reset",
+        "Wed, 21 Oct 2015 07:28:00 GMT"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": null,
+      "reset": 7,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Reset",
+        "3"
+      ],
+      [
+        "X-RateLimit-Reset",
+        "4"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": null,
+      "reset": 4,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "Retry-After",
+        "12"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": null,
+      "reset": null,
+      "retryAfter": 12
+    }
+  },
+  {
+    "input": [
+      [
+        "RETRY-AFTER",
+        "12"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": null,
+      "reset": null,
+      "retryAfter": 12
+    }
+  },
+  {
+    "input": [
+      [
+        "retry-after",
+        "12"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": null,
+      "reset": null,
+      "retryAfter": 12
+    }
+  },
+  {
+    "input": [
+      [
+        "Retry-After",
+        "0"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": null,
+      "reset": null,
+      "retryAfter": 0
+    }
+  },
+  {
+    "input": [
+      [
+        "Retry-After",
+        " \t42\t "
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": null,
+      "reset": null,
+      "retryAfter": 42
+    }
+  },
+  {
+    "input": [
+      [
+        "Retry-After",
+        "9007199254740991"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": null,
+      "reset": null,
+      "retryAfter": 9007199254740991
+    }
+  },
+  {
+    "input": [
+      [
+        "Retry-After",
+        "7"
+      ],
+      [
+        "Retry-After",
+        ""
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": null,
+      "reset": null,
+      "retryAfter": 7
+    }
+  },
+  {
+    "input": [
+      [
+        "Retry-After",
+        "7"
+      ],
+      [
+        "Retry-After",
+        "01"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": null,
+      "reset": null,
+      "retryAfter": 7
+    }
+  },
+  {
+    "input": [
+      [
+        "Retry-After",
+        "7"
+      ],
+      [
+        "Retry-After",
+        "-1"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": null,
+      "reset": null,
+      "retryAfter": 7
+    }
+  },
+  {
+    "input": [
+      [
+        "Retry-After",
+        "7"
+      ],
+      [
+        "Retry-After",
+        "+1"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": null,
+      "reset": null,
+      "retryAfter": 7
+    }
+  },
+  {
+    "input": [
+      [
+        "Retry-After",
+        "7"
+      ],
+      [
+        "Retry-After",
+        "1.0"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": null,
+      "reset": null,
+      "retryAfter": 7
+    }
+  },
+  {
+    "input": [
+      [
+        "Retry-After",
+        "7"
+      ],
+      [
+        "Retry-After",
+        "1e2"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": null,
+      "reset": null,
+      "retryAfter": 7
+    }
+  },
+  {
+    "input": [
+      [
+        "Retry-After",
+        "7"
+      ],
+      [
+        "Retry-After",
+        "1,2"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": null,
+      "reset": null,
+      "retryAfter": 7
+    }
+  },
+  {
+    "input": [
+      [
+        "Retry-After",
+        "7"
+      ],
+      [
+        "Retry-After",
+        "１"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": null,
+      "reset": null,
+      "retryAfter": 7
+    }
+  },
+  {
+    "input": [
+      [
+        "Retry-After",
+        "7"
+      ],
+      [
+        "Retry-After",
+        "١"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": null,
+      "reset": null,
+      "retryAfter": 7
+    }
+  },
+  {
+    "input": [
+      [
+        "Retry-After",
+        "7"
+      ],
+      [
+        "Retry-After",
+        "1\n"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": null,
+      "reset": null,
+      "retryAfter": 7
+    }
+  },
+  {
+    "input": [
+      [
+        "Retry-After",
+        "7"
+      ],
+      [
+        "Retry-After",
+        "\n1"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": null,
+      "reset": null,
+      "retryAfter": 7
+    }
+  },
+  {
+    "input": [
+      [
+        "Retry-After",
+        "7"
+      ],
+      [
+        "Retry-After",
+        " 1"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": null,
+      "reset": null,
+      "retryAfter": 7
+    }
+  },
+  {
+    "input": [
+      [
+        "Retry-After",
+        "7"
+      ],
+      [
+        "Retry-After",
+        "9007199254740992"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": null,
+      "reset": null,
+      "retryAfter": 7
+    }
+  },
+  {
+    "input": [
+      [
+        "Retry-After",
+        "7"
+      ],
+      [
+        "Retry-After",
+        "Wed, 21 Oct 2015 07:28:00 GMT"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": null,
+      "reset": null,
+      "retryAfter": 7
+    }
+  },
+  {
+    "input": [
+      [
+        "Retry-After",
+        "3"
+      ],
+      [
+        "Retry-After",
+        "4"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": null,
+      "reset": null,
+      "retryAfter": 4
+    }
+  },
+  {
+    "input": [
+      [
+        " RateLimit-Limit",
+        "1"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": null,
+      "reset": null,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Limit ",
+        "1"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": null,
+      "reset": null,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "RateLimit-Limit",
+        "1"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": null,
+      "reset": null,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "__proto__",
+        "1"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": null,
+      "reset": null,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "constructor",
+        "1"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": null,
+      "reset": null,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "Retry-After\n",
+        "1"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": null,
+      "reset": null,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "Ｒetry-After",
+        "1"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": null,
+      "reset": null,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "x-ratelimit-limİt",
+        "1"
+      ]
+    ],
+    "expected": {
+      "limit": null,
+      "remaining": null,
+      "reset": null,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Limit",
+        "9"
+      ],
+      [
+        "X-RateLimit-Remaining",
+        "9"
+      ],
+      [
+        "X-RateLimit-Reset",
+        "9"
+      ],
+      [
+        "Retry-After",
+        "9"
+      ]
+    ],
+    "expected": {
+      "limit": 9,
+      "remaining": 9,
+      "reset": 9,
+      "retryAfter": 9
+    }
+  },
+  {
+    "input": [
+      [
+        "X-RateLimit-Limit",
+        "1"
+      ],
+      [
+        "X-RateLimit-Remaining",
+        "9"
+      ]
+    ],
+    "expected": {
+      "limit": 1,
+      "remaining": 9,
+      "reset": null,
+      "retryAfter": null
+    }
+  },
+  {
+    "input": null,
+    "error": "TypeError"
+  },
+  {
+    "input": {},
+    "error": "TypeError"
+  },
+  {
+    "input": "headers",
+    "error": "TypeError"
+  },
+  {
+    "input": [
+      null
+    ],
+    "error": "TypeError"
+  },
+  {
+    "input": [
+      [
+        "a"
+      ]
+    ],
+    "error": "TypeError"
+  },
+  {
+    "input": [
+      [
+        "a",
+        "1",
+        "x"
+      ]
+    ],
+    "error": "TypeError"
+  },
+  {
+    "input": [
+      [
+        1,
+        "2"
+      ]
+    ],
+    "error": "TypeError"
+  },
+  {
+    "input": [
+      [
+        "unknown",
+        null
+      ]
+    ],
+    "error": "TypeError"
+  },
+  {
+    "input": [
+      [
+        "Retry-After",
+        true
+      ]
+    ],
+    "error": "TypeError"
+  }
+]
