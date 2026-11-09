@@ -1,0 +1,98 @@
+[
+  {
+    "input": "",
+    "expected": ""
+  },
+  {
+    "input": "/",
+    "expected": ""
+  },
+  {
+    "input": "///",
+    "expected": "//"
+  },
+  {
+    "input": "task/",
+    "expected": "task"
+  },
+  {
+    "input": "a/b",
+    "expected": "a/b"
+  },
+  {
+    "input": "a/ ",
+    "expected": "a/ "
+  },
+  {
+    "input": "é/",
+    "expected": "é"
+  },
+  {
+    "input": "a//",
+    "expected": "a/"
+  },
+  {
+    "input": "/a",
+    "expected": "/a"
+  },
+  {
+    "input": "\\",
+    "expected": "\\"
+  },
+  {
+    "input": "a\\",
+    "expected": "a\\"
+  },
+  {
+    "input": "é/",
+    "expected": "é"
+  },
+  {
+    "input": "\u0000/",
+    "expected": "\u0000"
+  },
+  {
+    "input": "https://a/b/",
+    "expected": "https://a/b"
+  },
+  {
+    "input": "x\n/",
+    "expected": "x\n"
+  },
+  {
+    "input": "x/\n",
+    "expected": "x/\n"
+  },
+  {
+    "input": "a／",
+    "expected": "a／"
+  },
+  {
+    "input": "🚀/",
+    "expected": "🚀"
+  },
+  {
+    "input": " /",
+    "expected": " "
+  },
+  {
+    "input": 1,
+    "error": "TypeError"
+  },
+  {
+    "input": null,
+    "error": "TypeError"
+  },
+  {
+    "input": true,
+    "error": "TypeError"
+  },
+  {
+    "input": [],
+    "error": "TypeError"
+  },
+  {
+    "input": {},
+    "error": "TypeError"
+  }
+]
