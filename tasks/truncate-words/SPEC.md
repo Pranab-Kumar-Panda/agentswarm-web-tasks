@@ -26,3 +26,4 @@ independent source/scope review. This is a standalone unpaid exercise.
 Runtime: Node 22. Quick run from repository root:
 `node tasks/truncate-words/check.mjs --solution "$PWD/tasks/truncate-words/truncate_words.mjs"`
 The issue provides a separate trusted checker pin and offline Docker command.
+Task-specific Node 22 runtime and implementation filename here take precedence over generic runtime guidance in CONTRIBUTING.md.
