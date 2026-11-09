@@ -1,0 +1,296 @@
+[
+  {
+    "input": "PT0S",
+    "expected": 0
+  },
+  {
+    "input": "P0D",
+    "expected": 0
+  },
+  {
+    "input": "PT0H",
+    "expected": 0
+  },
+  {
+    "input": "PT0M",
+    "expected": 0
+  },
+  {
+    "input": "P1D",
+    "expected": 86400000
+  },
+  {
+    "input": "PT1H",
+    "expected": 3600000
+  },
+  {
+    "input": "PT90M",
+    "expected": 5400000
+  },
+  {
+    "input": "P1DT2H3M4.005S",
+    "expected": 93784005
+  },
+  {
+    "input": "PT9007199254740.991S",
+    "expected": 9007199254740991
+  },
+  {
+    "input": "PT9007199254740.992S",
+    "expected": null
+  },
+  {
+    "input": "PT9007199254741S",
+    "expected": null
+  },
+  {
+    "input": "P104249991DT8H59M0.991S",
+    "expected": 9007199254740991
+  },
+  {
+    "input": "P104249991DT8H59M0.992S",
+    "expected": null
+  },
+  {
+    "input": "PT0.1S",
+    "expected": 100
+  },
+  {
+    "input": "PT0.01S",
+    "expected": 10
+  },
+  {
+    "input": "PT0.001S",
+    "expected": 1
+  },
+  {
+    "input": "PT0.12S",
+    "expected": 120
+  },
+  {
+    "input": "PT0.123S",
+    "expected": 123
+  },
+  {
+    "input": "PT0.999S",
+    "expected": 999
+  },
+  {
+    "input": "PT0.000S",
+    "expected": 0
+  },
+  {
+    "input": "PT1M1S",
+    "expected": 61000
+  },
+  {
+    "input": "PT2M2S",
+    "expected": 122000
+  },
+  {
+    "input": "PT3M3S",
+    "expected": 183000
+  },
+  {
+    "input": "PT4M4S",
+    "expected": 244000
+  },
+  {
+    "input": "PT5M5S",
+    "expected": 305000
+  },
+  {
+    "input": "PT6M6S",
+    "expected": 366000
+  },
+  {
+    "input": "PT7M7S",
+    "expected": 427000
+  },
+  {
+    "input": "PT8M8S",
+    "expected": 488000
+  },
+  {
+    "input": "PT9M9S",
+    "expected": 549000
+  },
+  {
+    "input": "PT10M10S",
+    "expected": 610000
+  },
+  {
+    "input": "PT11M11S",
+    "expected": 671000
+  },
+  {
+    "input": "PT12M12S",
+    "expected": 732000
+  },
+  {
+    "input": "PT13M13S",
+    "expected": 793000
+  },
+  {
+    "input": "PT14M14S",
+    "expected": 854000
+  },
+  {
+    "input": "PT15M15S",
+    "expected": 915000
+  },
+  {
+    "input": "",
+    "expected": null
+  },
+  {
+    "input": "P",
+    "expected": null
+  },
+  {
+    "input": "PT",
+    "expected": null
+  },
+  {
+    "input": "P1DT",
+    "expected": null
+  },
+  {
+    "input": "P1M",
+    "expected": null
+  },
+  {
+    "input": "P1Y",
+    "expected": null
+  },
+  {
+    "input": "P1W",
+    "expected": null
+  },
+  {
+    "input": "PT01S",
+    "expected": null
+  },
+  {
+    "input": "P01D",
+    "expected": null
+  },
+  {
+    "input": "PT1.S",
+    "expected": null
+  },
+  {
+    "input": "PT.1S",
+    "expected": null
+  },
+  {
+    "input": "PT1.0000S",
+    "expected": null
+  },
+  {
+    "input": "PT1,5S",
+    "expected": null
+  },
+  {
+    "input": "PT1.5M",
+    "expected": null
+  },
+  {
+    "input": "PT1M2H",
+    "expected": null
+  },
+  {
+    "input": "PT1S1S",
+    "expected": null
+  },
+  {
+    "input": "pt1s",
+    "expected": null
+  },
+  {
+    "input": " PT1S",
+    "expected": null
+  },
+  {
+    "input": "PT1S ",
+    "expected": null
+  },
+  {
+    "input": "PT1S\n",
+    "expected": null
+  },
+  {
+    "input": "PT１S",
+    "expected": null
+  },
+  {
+    "input": "PT١S",
+    "expected": null
+  },
+  {
+    "input": "PT1 S",
+    "expected": null
+  },
+  {
+    "input": "P−1D",
+    "expected": null
+  },
+  {
+    "input": "PT+1S",
+    "expected": null
+  },
+  {
+    "input": "PT1e3S",
+    "expected": null
+  },
+  {
+    "input": "P1D2H",
+    "expected": null
+  },
+  {
+    "input": "P1DTT1S",
+    "expected": null
+  },
+  {
+    "input": "P1DT0H0M0.00Sx",
+    "expected": null
+  },
+  {
+    "input": "P1D\u0000",
+    "expected": null
+  },
+  {
+    "input": "💡",
+    "expected": null
+  },
+  {
+    "input": "PT999999999999999999999999999999999S",
+    "expected": null
+  },
+  {
+    "input": null,
+    "error": "TypeError"
+  },
+  {
+    "input": 0,
+    "error": "TypeError"
+  },
+  {
+    "input": true,
+    "error": "TypeError"
+  },
+  {
+    "input": [],
+    "error": "TypeError"
+  },
+  {
+    "input": {},
+    "error": "TypeError"
+  },
+  {
+    "input": [
+      "PT1S"
+    ],
+    "error": "TypeError"
+  }
+]
