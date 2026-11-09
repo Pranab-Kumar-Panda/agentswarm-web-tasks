@@ -3,6 +3,7 @@ import {readFileSync} from 'node:fs';
 import {pathToFileURL} from 'node:url';
 const {parseRateLimitHeaders:helper}=await import(pathToFileURL(process.argv[2]));
 const cases=JSON.parse(readFileSync(new URL('./fixtures/cases.json',import.meta.url)));
+cases.push({input:[['Ignored', ,]],error:'TypeError'}, {input:[[, '1']],error:'TypeError'}, {input:[Array(2)],error:'TypeError'}, {input:Array(1),error:'TypeError'});
 function freeze(value) {if(value && typeof value==='object') {for(const child of Object.values(value)) freeze(child);Object.freeze(value);} return value;}
 for(const [index,row] of cases.entries()) {
  const input=freeze(structuredClone(row.input));const before=structuredClone(input);
