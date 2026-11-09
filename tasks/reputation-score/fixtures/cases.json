@@ -1,0 +1,161 @@
+[
+  {
+    "args": [
+      []
+    ],
+    "expected": 0
+  },
+  {
+    "args": [
+      [
+        0
+      ]
+    ],
+    "expected": 0
+  },
+  {
+    "args": [
+      [
+        0,
+        1
+      ]
+    ],
+    "expected": 1
+  },
+  {
+    "args": [
+      [
+        1,
+        2
+      ]
+    ],
+    "expected": 2
+  },
+  {
+    "args": [
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "expected": 0
+  },
+  {
+    "args": [
+      [
+        100,
+        99
+      ]
+    ],
+    "expected": 100
+  },
+  {
+    "args": [
+      [
+        10,
+        20,
+        30
+      ]
+    ],
+    "expected": 20
+  },
+  {
+    "args": [
+      [
+        100
+      ]
+    ],
+    "expected": 100
+  },
+  {
+    "args": [
+      [
+        0,
+        1,
+        1
+      ]
+    ],
+    "expected": 1
+  },
+  {
+    "args": [
+      [
+        1,
+        1,
+        2
+      ]
+    ],
+    "expected": 1
+  },
+  {
+    "args": [
+      [
+        99,
+        100,
+        100
+      ]
+    ],
+    "expected": 100
+  },
+  {
+    "args": [
+      [
+        0.5
+      ]
+    ],
+    "error": "RangeError"
+  },
+  {
+    "args": [
+      [
+        -1
+      ]
+    ],
+    "error": "RangeError"
+  },
+  {
+    "args": [
+      [
+        101
+      ]
+    ],
+    "error": "RangeError"
+  },
+  {
+    "args": [
+      [
+        true
+      ]
+    ],
+    "error": "TypeError"
+  },
+  {
+    "args": [
+      [
+        "1"
+      ]
+    ],
+    "error": "TypeError"
+  },
+  {
+    "args": [
+      [
+        null
+      ]
+    ],
+    "error": "TypeError"
+  },
+  {
+    "args": [
+      null
+    ],
+    "error": "TypeError"
+  },
+  {
+    "args": [
+      {}
+    ],
+    "error": "TypeError"
+  }
+]
