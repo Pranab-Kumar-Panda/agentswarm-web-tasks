@@ -1,0 +1,700 @@
+[
+  {
+    "input": "<p2>; rel=next",
+    "expected": [
+      {
+        "url": "p2",
+        "rels": [
+          "next"
+        ]
+      }
+    ]
+  },
+  {
+    "input": "<p2>; rel=prev",
+    "expected": [
+      {
+        "url": "p2",
+        "rels": [
+          "prev"
+        ]
+      }
+    ]
+  },
+  {
+    "input": "<p2>; rel=NEXT",
+    "expected": [
+      {
+        "url": "p2",
+        "rels": [
+          "NEXT"
+        ]
+      }
+    ]
+  },
+  {
+    "input": "<p2>; rel=last",
+    "expected": [
+      {
+        "url": "p2",
+        "rels": [
+          "last"
+        ]
+      }
+    ]
+  },
+  {
+    "input": "</tasks?page=2>; rel=next",
+    "expected": [
+      {
+        "url": "/tasks?page=2",
+        "rels": [
+          "next"
+        ]
+      }
+    ]
+  },
+  {
+    "input": "</tasks?page=2>; rel=prev",
+    "expected": [
+      {
+        "url": "/tasks?page=2",
+        "rels": [
+          "prev"
+        ]
+      }
+    ]
+  },
+  {
+    "input": "</tasks?page=2>; rel=NEXT",
+    "expected": [
+      {
+        "url": "/tasks?page=2",
+        "rels": [
+          "NEXT"
+        ]
+      }
+    ]
+  },
+  {
+    "input": "</tasks?page=2>; rel=last",
+    "expected": [
+      {
+        "url": "/tasks?page=2",
+        "rels": [
+          "last"
+        ]
+      }
+    ]
+  },
+  {
+    "input": "<https://example.invalid/a?x=1&y=2>; rel=next",
+    "expected": [
+      {
+        "url": "https://example.invalid/a?x=1&y=2",
+        "rels": [
+          "next"
+        ]
+      }
+    ]
+  },
+  {
+    "input": "<https://example.invalid/a?x=1&y=2>; rel=prev",
+    "expected": [
+      {
+        "url": "https://example.invalid/a?x=1&y=2",
+        "rels": [
+          "prev"
+        ]
+      }
+    ]
+  },
+  {
+    "input": "<https://example.invalid/a?x=1&y=2>; rel=NEXT",
+    "expected": [
+      {
+        "url": "https://example.invalid/a?x=1&y=2",
+        "rels": [
+          "NEXT"
+        ]
+      }
+    ]
+  },
+  {
+    "input": "<https://example.invalid/a?x=1&y=2>; rel=last",
+    "expected": [
+      {
+        "url": "https://example.invalid/a?x=1&y=2",
+        "rels": [
+          "last"
+        ]
+      }
+    ]
+  },
+  {
+    "input": "<東京>; rel=next",
+    "expected": [
+      {
+        "url": "東京",
+        "rels": [
+          "next"
+        ]
+      }
+    ]
+  },
+  {
+    "input": "<東京>; rel=prev",
+    "expected": [
+      {
+        "url": "東京",
+        "rels": [
+          "prev"
+        ]
+      }
+    ]
+  },
+  {
+    "input": "<東京>; rel=NEXT",
+    "expected": [
+      {
+        "url": "東京",
+        "rels": [
+          "NEXT"
+        ]
+      }
+    ]
+  },
+  {
+    "input": "<東京>; rel=last",
+    "expected": [
+      {
+        "url": "東京",
+        "rels": [
+          "last"
+        ]
+      }
+    ]
+  },
+  {
+    "input": "<💡>; rel=next",
+    "expected": [
+      {
+        "url": "💡",
+        "rels": [
+          "next"
+        ]
+      }
+    ]
+  },
+  {
+    "input": "<💡>; rel=prev",
+    "expected": [
+      {
+        "url": "💡",
+        "rels": [
+          "prev"
+        ]
+      }
+    ]
+  },
+  {
+    "input": "<💡>; rel=NEXT",
+    "expected": [
+      {
+        "url": "💡",
+        "rels": [
+          "NEXT"
+        ]
+      }
+    ]
+  },
+  {
+    "input": "<💡>; rel=last",
+    "expected": [
+      {
+        "url": "💡",
+        "rels": [
+          "last"
+        ]
+      }
+    ]
+  },
+  {
+    "input": "<../next>; rel=next",
+    "expected": [
+      {
+        "url": "../next",
+        "rels": [
+          "next"
+        ]
+      }
+    ]
+  },
+  {
+    "input": "<../next>; rel=prev",
+    "expected": [
+      {
+        "url": "../next",
+        "rels": [
+          "prev"
+        ]
+      }
+    ]
+  },
+  {
+    "input": "<../next>; rel=NEXT",
+    "expected": [
+      {
+        "url": "../next",
+        "rels": [
+          "NEXT"
+        ]
+      }
+    ]
+  },
+  {
+    "input": "<../next>; rel=last",
+    "expected": [
+      {
+        "url": "../next",
+        "rels": [
+          "last"
+        ]
+      }
+    ]
+  },
+  {
+    "input": "<#page>; rel=next",
+    "expected": [
+      {
+        "url": "#page",
+        "rels": [
+          "next"
+        ]
+      }
+    ]
+  },
+  {
+    "input": "<#page>; rel=prev",
+    "expected": [
+      {
+        "url": "#page",
+        "rels": [
+          "prev"
+        ]
+      }
+    ]
+  },
+  {
+    "input": "<#page>; rel=NEXT",
+    "expected": [
+      {
+        "url": "#page",
+        "rels": [
+          "NEXT"
+        ]
+      }
+    ]
+  },
+  {
+    "input": "<#page>; rel=last",
+    "expected": [
+      {
+        "url": "#page",
+        "rels": [
+          "last"
+        ]
+      }
+    ]
+  },
+  {
+    "input": "<__proto__>; rel=next",
+    "expected": [
+      {
+        "url": "__proto__",
+        "rels": [
+          "next"
+        ]
+      }
+    ]
+  },
+  {
+    "input": "<__proto__>; rel=prev",
+    "expected": [
+      {
+        "url": "__proto__",
+        "rels": [
+          "prev"
+        ]
+      }
+    ]
+  },
+  {
+    "input": "<__proto__>; rel=NEXT",
+    "expected": [
+      {
+        "url": "__proto__",
+        "rels": [
+          "NEXT"
+        ]
+      }
+    ]
+  },
+  {
+    "input": "<__proto__>; rel=last",
+    "expected": [
+      {
+        "url": "__proto__",
+        "rels": [
+          "last"
+        ]
+      }
+    ]
+  },
+  {
+    "input": "<p>; rel=\"next prev next\"",
+    "expected": [
+      {
+        "url": "p",
+        "rels": [
+          "next",
+          "prev"
+        ]
+      }
+    ]
+  },
+  {
+    "input": "<p>; rel=\" next\tlast \"",
+    "expected": [
+      {
+        "url": "p",
+        "rels": [
+          "next",
+          "last"
+        ]
+      }
+    ]
+  },
+  {
+    "input": "<p>; rel=\"東京 🚀\"",
+    "expected": [
+      {
+        "url": "p",
+        "rels": [
+          "東京",
+          "🚀"
+        ]
+      }
+    ]
+  },
+  {
+    "input": "<p>; rel=\"next,prev\"",
+    "expected": [
+      {
+        "url": "p",
+        "rels": [
+          "next,prev"
+        ]
+      }
+    ]
+  },
+  {
+    "input": "<p>; rel=\"a\\\"b\"",
+    "expected": [
+      {
+        "url": "p",
+        "rels": [
+          "a\"b"
+        ]
+      }
+    ]
+  },
+  {
+    "input": "<p>; rel=\"a\\\\b\"",
+    "expected": [
+      {
+        "url": "p",
+        "rels": [
+          "a\\b"
+        ]
+      }
+    ]
+  },
+  {
+    "input": "<p>; rel=\"next NEXT\"",
+    "expected": [
+      {
+        "url": "p",
+        "rels": [
+          "next",
+          "NEXT"
+        ]
+      }
+    ]
+  },
+  {
+    "input": "",
+    "expected": []
+  },
+  {
+    "input": "<>; rel=next",
+    "expected": []
+  },
+  {
+    "input": "<a b>; rel=next",
+    "expected": []
+  },
+  {
+    "input": "<a b>; rel=next",
+    "expected": []
+  },
+  {
+    "input": "<a,b>; rel=next",
+    "expected": []
+  },
+  {
+    "input": "<a>; rel=\"\"",
+    "expected": []
+  },
+  {
+    "input": "<a>",
+    "expected": []
+  },
+  {
+    "input": "<a>; title=x",
+    "expected": []
+  },
+  {
+    "input": "<a>; rel=",
+    "expected": []
+  },
+  {
+    "input": "<a>; 1rel=next",
+    "expected": []
+  },
+  {
+    "input": "<a>; rel=東京",
+    "expected": []
+  },
+  {
+    "input": "<a>; rel=\"bad\\q\"",
+    "expected": []
+  },
+  {
+    "input": "<a>; rel=\"a\nb\"",
+    "expected": []
+  },
+  {
+    "input": "<a>; rel=next\n",
+    "expected": []
+  },
+  {
+    "input": "<a>;rel=next x",
+    "expected": []
+  },
+  {
+    "input": "<a>; rel=\"unclosed",
+    "expected": []
+  },
+  {
+    "input": "<a>; rel=next;broken",
+    "expected": []
+  },
+  {
+    "input": "a;rel=next",
+    "expected": []
+  },
+  {
+    "input": "<a>; rel=next; title=\"unterminated",
+    "expected": []
+  },
+  {
+    "input": " \t<p1> ; REL = \"next\" ; title=\"a,b\"\t ",
+    "expected": [
+      {
+        "url": "p1",
+        "rels": [
+          "next"
+        ]
+      }
+    ]
+  },
+  {
+    "input": " \t<p2> ; REL = \"next\" ; title=\"a,b\"\t ",
+    "expected": [
+      {
+        "url": "p2",
+        "rels": [
+          "next"
+        ]
+      }
+    ]
+  },
+  {
+    "input": " \t<p3> ; REL = \"next\" ; title=\"a,b\"\t ",
+    "expected": [
+      {
+        "url": "p3",
+        "rels": [
+          "next"
+        ]
+      }
+    ]
+  },
+  {
+    "input": " \t<p4> ; REL = \"next\" ; title=\"a,b\"\t ",
+    "expected": [
+      {
+        "url": "p4",
+        "rels": [
+          "next"
+        ]
+      }
+    ]
+  },
+  {
+    "input": " \t<p5> ; REL = \"next\" ; title=\"a,b\"\t ",
+    "expected": [
+      {
+        "url": "p5",
+        "rels": [
+          "next"
+        ]
+      }
+    ]
+  },
+  {
+    "input": " \t<p6> ; REL = \"next\" ; title=\"a,b\"\t ",
+    "expected": [
+      {
+        "url": "p6",
+        "rels": [
+          "next"
+        ]
+      }
+    ]
+  },
+  {
+    "input": " \t<p7> ; REL = \"next\" ; title=\"a,b\"\t ",
+    "expected": [
+      {
+        "url": "p7",
+        "rels": [
+          "next"
+        ]
+      }
+    ]
+  },
+  {
+    "input": " \t<p8> ; REL = \"next\" ; title=\"a,b\"\t ",
+    "expected": [
+      {
+        "url": "p8",
+        "rels": [
+          "next"
+        ]
+      }
+    ]
+  },
+  {
+    "input": " \t<p9> ; REL = \"next\" ; title=\"a,b\"\t ",
+    "expected": [
+      {
+        "url": "p9",
+        "rels": [
+          "next"
+        ]
+      }
+    ]
+  },
+  {
+    "input": " \t<p10> ; REL = \"next\" ; title=\"a,b\"\t ",
+    "expected": [
+      {
+        "url": "p10",
+        "rels": [
+          "next"
+        ]
+      }
+    ]
+  },
+  {
+    "input": "<a>; rel=next, bad, <b>; rel=prev",
+    "expected": [
+      {
+        "url": "a",
+        "rels": [
+          "next"
+        ]
+      },
+      {
+        "url": "b",
+        "rels": [
+          "prev"
+        ]
+      }
+    ]
+  },
+  {
+    "input": "<a>; rel=next; rel=prev",
+    "expected": [
+      {
+        "url": "a",
+        "rels": [
+          "next"
+        ]
+      }
+    ]
+  },
+  {
+    "input": "<a>; rel=\"\"; rel=next",
+    "expected": []
+  },
+  {
+    "input": "<a>; rel=next, <a>; rel=next",
+    "expected": [
+      {
+        "url": "a",
+        "rels": [
+          "next"
+        ]
+      },
+      {
+        "url": "a",
+        "rels": [
+          "next"
+        ]
+      }
+    ]
+  },
+  {
+    "input": "<a>; rel=next, <b>; title=\"oops",
+    "expected": []
+  },
+  {
+    "input": null,
+    "error": "TypeError"
+  },
+  {
+    "input": false,
+    "error": "TypeError"
+  },
+  {
+    "input": 0,
+    "error": "TypeError"
+  },
+  {
+    "input": [],
+    "error": "TypeError"
+  },
+  {
+    "input": {},
+    "error": "TypeError"
+  },
+  {
+    "input": [
+      "x"
+    ],
+    "error": "TypeError"
+  }
+]
