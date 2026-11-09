@@ -321,86 +321,6 @@
   },
   {
     "input": [
-      "\ud800ab",
-      0,
-      "\u2026"
-    ],
-    "expected": ""
-  },
-  {
-    "input": [
-      "\ud800ab",
-      1,
-      "\u2026"
-    ],
-    "expected": "\u2026"
-  },
-  {
-    "input": [
-      "\ud800ab",
-      2,
-      "\u2026"
-    ],
-    "expected": "\ud800\u2026"
-  },
-  {
-    "input": [
-      "\ud800ab",
-      3,
-      "\u2026"
-    ],
-    "expected": "\ud800ab"
-  },
-  {
-    "input": [
-      "\ud800ab",
-      8,
-      "\u2026"
-    ],
-    "expected": "\ud800ab"
-  },
-  {
-    "input": [
-      "a\udfff",
-      0,
-      "\u2026"
-    ],
-    "expected": ""
-  },
-  {
-    "input": [
-      "a\udfff",
-      1,
-      "\u2026"
-    ],
-    "expected": "\u2026"
-  },
-  {
-    "input": [
-      "a\udfff",
-      2,
-      "\u2026"
-    ],
-    "expected": "a\udfff"
-  },
-  {
-    "input": [
-      "a\udfff",
-      3,
-      "\u2026"
-    ],
-    "expected": "a\udfff"
-  },
-  {
-    "input": [
-      "a\udfff",
-      8,
-      "\u2026"
-    ],
-    "expected": "a\udfff"
-  },
-  {
-    "input": [
       "a\u0000\nb",
       0,
       "\u2026"
@@ -643,38 +563,6 @@
     "input": [
       "abcdef",
       0,
-      "\ud800X"
-    ],
-    "expected": ""
-  },
-  {
-    "input": [
-      "abcdef",
-      1,
-      "\ud800X"
-    ],
-    "expected": "\ud800"
-  },
-  {
-    "input": [
-      "abcdef",
-      2,
-      "\ud800X"
-    ],
-    "expected": "\ud800X"
-  },
-  {
-    "input": [
-      "abcdef",
-      3,
-      "\ud800X"
-    ],
-    "expected": "a\ud800X"
-  },
-  {
-    "input": [
-      "abcdef",
-      0,
       "\n\u0000"
     ],
     "expected": ""
@@ -734,6 +622,286 @@
       "abcdef"
     ],
     "expected": "abc"
+  },
+  {
+    "input": [
+      "\ud800",
+      0,
+      "\u2026"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "\ud800",
+      2,
+      ""
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "abc",
+      1,
+      "\ud800"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "",
+      5,
+      "\ud800"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "\udfff",
+      0,
+      "\u2026"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "\udfff",
+      2,
+      ""
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "abc",
+      1,
+      "\udfff"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "",
+      5,
+      "\udfff"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "a\ud800",
+      0,
+      "\u2026"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "a\ud800",
+      2,
+      ""
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "abc",
+      1,
+      "a\ud800"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "",
+      5,
+      "a\ud800"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "\udfffz",
+      0,
+      "\u2026"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "\udfffz",
+      2,
+      ""
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "abc",
+      1,
+      "\udfffz"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "",
+      5,
+      "\udfffz"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "\ud800\ud800",
+      0,
+      "\u2026"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "\ud800\ud800",
+      2,
+      ""
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "abc",
+      1,
+      "\ud800\ud800"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "",
+      5,
+      "\ud800\ud800"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "\udfff\ud800",
+      0,
+      "\u2026"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "\udfff\ud800",
+      2,
+      ""
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "abc",
+      1,
+      "\udfff\ud800"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "",
+      5,
+      "\udfff\ud800"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "a\ud800b",
+      0,
+      "\u2026"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "a\ud800b",
+      2,
+      ""
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "abc",
+      1,
+      "a\ud800b"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "",
+      5,
+      "a\ud800b"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "\ud800abc",
+      2,
+      "\udfff"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "abc",
+      0,
+      "\udfff"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "input": [
+      "\ud83d\ude80abc",
+      1,
+      ""
+    ],
+    "expected": "\ud83d\ude80"
+  },
+  {
+    "input": [
+      "a\ud83d\ude80bc",
+      2,
+      ""
+    ],
+    "expected": "a\ud83d\ude80"
+  },
+  {
+    "input": [
+      "abc",
+      1,
+      "\ud83d\ude80"
+    ],
+    "expected": "\ud83d\ude80"
+  },
+  {
+    "input": [
+      "\ud83d\ude80abc",
+      3,
+      "\u2026"
+    ],
+    "expected": "\ud83d\ude80a\u2026"
+  },
+  {
+    "input": [
+      "\ud800",
+      true,
+      ""
+    ],
+    "error": "TypeError"
   },
   {
     "input": [

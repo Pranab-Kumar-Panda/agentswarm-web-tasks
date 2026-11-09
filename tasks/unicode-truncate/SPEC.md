@@ -15,11 +15,14 @@ otherwise raise RangeError, including NaN and either infinity. Negative zero
 is accepted as zero. Error messages are unconstrained.
 
 Count Unicode code points using ECMAScript string iteration (as `Array.from`
-does), not UTF-16 code units or user-perceived graphemes. Valid surrogate pairs
-are one point; an unpaired surrogate is one point preserved literally. Combining
-marks, variation selectors, regional indicators and zero-width joiners each
-count separately. Do not normalize, trim, fold case, interpret markup or split
-on whitespace. Newline, NUL and punctuation are ordinary points.
+does), not UTF-16 code units or user-perceived graphemes. Both text and ellipsis
+must be well-formed UTF-16: ANY lone high or low surrogate raises RangeError,
+even when text already fits or the budget is zero. Validate both entire strings
+before deciding whether to truncate. Valid surrogate pairs are one point and
+must remain intact across a cut. Combining marks, variation selectors, regional
+indicators and zero-width joiners each count separately. Do not normalize, trim,
+fold case, interpret markup or split on whitespace. Newline, NUL and punctuation
+are ordinary points.
 
 If text contains no more than maxPoints points, return it unchanged, regardless
 of ellipsis length. Otherwise retain the first min(maxPoints, ellipsis's point

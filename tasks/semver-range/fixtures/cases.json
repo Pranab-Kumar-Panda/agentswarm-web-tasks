@@ -183,6 +183,90 @@
   },
   {
     "input": [
+      "1.2.3",
+      "  >=1.0.0  <2.0.0\t "
+    ],
+    "expected": true
+  },
+  {
+    "input": [
+      "1.2.3",
+      "^1.0.0  <1.2.3"
+    ],
+    "expected": false
+  },
+  {
+    "input": [
+      "1.2.3",
+      "  >=1.0.0\t\t<2.0.0\t "
+    ],
+    "expected": true
+  },
+  {
+    "input": [
+      "1.2.3",
+      "^1.0.0\t\t<1.2.3"
+    ],
+    "expected": false
+  },
+  {
+    "input": [
+      "1.2.3",
+      "  >=1.0.0 \t<2.0.0\t "
+    ],
+    "expected": true
+  },
+  {
+    "input": [
+      "1.2.3",
+      "^1.0.0 \t<1.2.3"
+    ],
+    "expected": false
+  },
+  {
+    "input": [
+      "1.2.3",
+      "  >=1.0.0\t <2.0.0\t "
+    ],
+    "expected": true
+  },
+  {
+    "input": [
+      "1.2.3",
+      "^1.0.0\t <1.2.3"
+    ],
+    "expected": false
+  },
+  {
+    "input": [
+      "1.2.3",
+      "  >=1.0.0 \t \t <2.0.0\t "
+    ],
+    "expected": true
+  },
+  {
+    "input": [
+      "1.2.3",
+      "^1.0.0 \t \t <1.2.3"
+    ],
+    "expected": false
+  },
+  {
+    "input": [
+      "1.2.3",
+      " \t \t* \t\t"
+    ],
+    "expected": true
+  },
+  {
+    "input": [
+      "1.2.3",
+      "\t \t>=1.2.3\t \t"
+    ],
+    "expected": true
+  },
+  {
+    "input": [
       "1.2.2",
       "1.2.3"
     ],
