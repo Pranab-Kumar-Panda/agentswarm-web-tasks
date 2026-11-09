@@ -19,4 +19,13 @@ assert.throws(()=>helper(Array(2)),TypeError);
 assert.throws(()=>helper([NaN,'x']),TypeError);
 for (const value of [NaN,Infinity,-Infinity]) assert.throws(()=>helper([value]),RangeError);
 const own=[1,2];own.note='ignored';assert.equal(helper(own),'1-2');assert.equal(own.note,'ignored');
+assert.equal(helper([0,-0,2]),'0,2','SPEC negative-zero example');
+for (const name of ['some','sort','map','slice','constructor']) {
+  const shadowed=[1,2];shadowed[name]=null;
+  assert.equal(helper(shadowed),'1-2','ignore named property '+name);
+  assert.equal(shadowed[name],null,'leave named property untouched');
+}
+const bypass=[1.5,2];bypass.some=()=>false;
+assert.throws(()=>helper(bypass),RangeError,'shadowed some must not bypass numeric validation');
+
 console.log(`PASS compress-numbers: ${cases.length} exact fixtures and type/repeat probes`);
