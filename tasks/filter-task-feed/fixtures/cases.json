@@ -1,0 +1,333 @@
+[
+  {
+    "args": [
+      [],
+      "*"
+    ],
+    "expected": []
+  },
+  {
+    "args": [
+      [],
+      "status=open"
+    ],
+    "expected": []
+  },
+  {
+    "args": [
+      [],
+      "status=claimed"
+    ],
+    "expected": []
+  },
+  {
+    "args": [
+      [],
+      "status=closed"
+    ],
+    "expected": []
+  },
+  {
+    "args": [
+      [
+        {
+          "id": "a",
+          "status": "open"
+        },
+        {
+          "id": "b",
+          "status": "claimed"
+        },
+        {
+          "id": "a",
+          "status": "open"
+        }
+      ],
+      "*"
+    ],
+    "expected": [
+      "a",
+      "b",
+      "a"
+    ]
+  },
+  {
+    "args": [
+      [
+        {
+          "id": "a",
+          "status": "open"
+        },
+        {
+          "id": "b",
+          "status": "claimed"
+        },
+        {
+          "id": "a",
+          "status": "open"
+        }
+      ],
+      "status=open"
+    ],
+    "expected": [
+      "a",
+      "a"
+    ]
+  },
+  {
+    "args": [
+      [
+        {
+          "id": "a",
+          "status": "open"
+        },
+        {
+          "id": "b",
+          "status": "claimed"
+        },
+        {
+          "id": "a",
+          "status": "open"
+        }
+      ],
+      "status=claimed"
+    ],
+    "expected": [
+      "b"
+    ]
+  },
+  {
+    "args": [
+      [
+        {
+          "id": "a",
+          "status": "open"
+        },
+        {
+          "id": "b",
+          "status": "claimed"
+        },
+        {
+          "id": "a",
+          "status": "open"
+        }
+      ],
+      "status=closed"
+    ],
+    "expected": []
+  },
+  {
+    "args": [
+      [
+        {
+          "id": "x",
+          "status": "closed"
+        }
+      ],
+      "*"
+    ],
+    "expected": [
+      "x"
+    ]
+  },
+  {
+    "args": [
+      [
+        {
+          "id": "x",
+          "status": "closed"
+        }
+      ],
+      "status=open"
+    ],
+    "expected": []
+  },
+  {
+    "args": [
+      [
+        {
+          "id": "x",
+          "status": "closed"
+        }
+      ],
+      "status=claimed"
+    ],
+    "expected": []
+  },
+  {
+    "args": [
+      [
+        {
+          "id": "x",
+          "status": "closed"
+        }
+      ],
+      "status=closed"
+    ],
+    "expected": [
+      "x"
+    ]
+  },
+  {
+    "args": [
+      [
+        {
+          "id": "x",
+          "status": "claimed"
+        }
+      ],
+      "*"
+    ],
+    "expected": [
+      "x"
+    ]
+  },
+  {
+    "args": [
+      [
+        {
+          "id": "x",
+          "status": "claimed"
+        }
+      ],
+      "status=open"
+    ],
+    "expected": []
+  },
+  {
+    "args": [
+      [
+        {
+          "id": "x",
+          "status": "claimed"
+        }
+      ],
+      "status=claimed"
+    ],
+    "expected": [
+      "x"
+    ]
+  },
+  {
+    "args": [
+      [
+        {
+          "id": "x",
+          "status": "claimed"
+        }
+      ],
+      "status=closed"
+    ],
+    "expected": []
+  },
+  {
+    "args": [
+      [],
+      ""
+    ],
+    "error": "RangeError"
+  },
+  {
+    "args": [
+      [],
+      " status=open"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "args": [
+      [],
+      "status=open "
+    ],
+    "error": "RangeError"
+  },
+  {
+    "args": [
+      [],
+      "status=open status=closed"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "args": [
+      [],
+      "status=OPEN"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "args": [
+      [],
+      "status =open"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "args": [
+      [],
+      "status=open\n"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "args": [
+      [],
+      "status=open|closed"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "args": [
+      [],
+      "* *"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "args": [
+      [],
+      "STATUS=open"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "args": [
+      [],
+      "status=\"open\""
+    ],
+    "error": "RangeError"
+  },
+  {
+    "args": [
+      [],
+      "status="
+    ],
+    "error": "RangeError"
+  },
+  {
+    "args": [
+      [],
+      "status=open\t"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "args": [
+      [],
+      "status=open\u0000"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "args": [
+      [
+        {
+          "id": "x",
+          "status": "OPEN"
+        }
+      ],
+      "*"
+    ],
+    "error": "RangeError"
+  }
+]

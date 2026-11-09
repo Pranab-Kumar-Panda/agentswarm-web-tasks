@@ -1,0 +1,92 @@
+[
+  {
+    "args": [
+      "open"
+    ],
+    "expected": "Available"
+  },
+  {
+    "args": [
+      "claimed"
+    ],
+    "expected": "In progress"
+  },
+  {
+    "args": [
+      "closed"
+    ],
+    "expected": "Complete"
+  },
+  {
+    "args": [
+      ""
+    ],
+    "error": "RangeError"
+  },
+  {
+    "args": [
+      "OPEN"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "args": [
+      " open"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "args": [
+      "closed "
+    ],
+    "error": "RangeError"
+  },
+  {
+    "args": [
+      "claimed\n"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "args": [
+      "open/"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "args": [
+      "available"
+    ],
+    "error": "RangeError"
+  },
+  {
+    "args": [
+      1
+    ],
+    "error": "TypeError"
+  },
+  {
+    "args": [
+      null
+    ],
+    "error": "TypeError"
+  },
+  {
+    "args": [
+      true
+    ],
+    "error": "TypeError"
+  },
+  {
+    "args": [
+      []
+    ],
+    "error": "TypeError"
+  },
+  {
+    "args": [
+      {}
+    ],
+    "error": "TypeError"
+  }
+]
