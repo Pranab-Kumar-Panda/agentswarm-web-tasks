@@ -10,9 +10,13 @@ Non-string input throws TypeError. Split the string at commas outside quoted
 parameter values. Within quotes only backslash-quote and backslash-backslash
 escapes are valid; a backslash escapes the next character when locating comma
 boundaries. If any quote is left open, return an empty array for the WHOLE input.
-For each segment trim only ASCII space and tab; ignore segments that fail the
+Quotes inside angle-bracket URI text do not affect quote state. An unquoted
+comma always separates segments, including in a malformed URI, and resets URI
+tracking. Outside URI text, quote characters toggle the quote state even in
+malformed segments. For each segment trim only ASCII space and tab; ignore
+segments that fail the
 following complete grammar. A segment is `<URI>` followed by zero or more
-parameters. URI is nonempty, contains no Unicode whitespace, commas or angle
+parameters. URI is nonempty, contains no Unicode White_Space character, U+FEFF, commas or angle
 brackets, and is returned unchanged (relative URLs and Unicode are allowed).
 
 Each parameter has optional ASCII spaces/tabs, semicolon, optional spaces/tabs,
