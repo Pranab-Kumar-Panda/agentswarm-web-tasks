@@ -1,0 +1,78 @@
+[
+  {
+    "input": 0,
+    "expected": 0
+  },
+  {
+    "input": 1,
+    "expected": 1
+  },
+  {
+    "input": 999,
+    "expected": 1
+  },
+  {
+    "input": 1000,
+    "expected": 1
+  },
+  {
+    "input": 1001,
+    "expected": 2
+  },
+  {
+    "input": 1999,
+    "expected": 2
+  },
+  {
+    "input": 2000,
+    "expected": 2
+  },
+  {
+    "input": 2001,
+    "expected": 3
+  },
+  {
+    "input": 1000000000,
+    "expected": 1000000
+  },
+  {
+    "input": 9007199254740991,
+    "expected": 9007199254741
+  },
+  {
+    "input": -1,
+    "error": "RangeError"
+  },
+  {
+    "input": 0.5,
+    "error": "RangeError"
+  },
+  {
+    "input": -0.5,
+    "error": "RangeError"
+  },
+  {
+    "input": 9007199254740992,
+    "error": "RangeError"
+  },
+  {
+    "input": "1",
+    "error": "TypeError"
+  },
+  {
+    "input": null,
+    "error": "TypeError"
+  },
+  {
+    "input": true,
+    "error": "TypeError"
+  },
+  {
+    "input": [],
+    "error": "TypeError"
+  },
+  {
+    "input": {},
+    "error": "TypeError"
+  }
+]
