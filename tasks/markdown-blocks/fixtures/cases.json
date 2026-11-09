@@ -1393,5 +1393,101 @@
         }
       ]
     }
+  },
+  {
+    "input": [
+      "# a\u2028"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "paragraph",
+          "text": "# a\u2028",
+          "startLine": 1,
+          "endLine": 1
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "# a\u2029"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "paragraph",
+          "text": "# a\u2029",
+          "startLine": 1,
+          "endLine": 1
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "- a\u2028"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "paragraph",
+          "text": "- a\u2028",
+          "startLine": 1,
+          "endLine": 1
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "- a\u2029"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "paragraph",
+          "text": "- a\u2029",
+          "startLine": 1,
+          "endLine": 1
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "> a\u2028"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "paragraph",
+          "text": "> a\u2028",
+          "startLine": 1,
+          "endLine": 1
+        }
+      ]
+    }
+  },
+  {
+    "input": [
+      "> a\u2029"
+    ],
+    "expected": {
+      "type": "document",
+      "children": [
+        {
+          "type": "paragraph",
+          "text": "> a\u2029",
+          "startLine": 1,
+          "endLine": 1
+        }
+      ]
+    }
   }
 ]
