@@ -1,0 +1,72 @@
+[
+  {
+    "args": [
+      "",
+      3
+    ],
+    "expected": ""
+  },
+  {
+    "args": [
+      "  a  bb c ",
+      2
+    ],
+    "expected": "a bb"
+  },
+  {
+    "args": [
+      "a b",
+      0
+    ],
+    "expected": ""
+  },
+  {
+    "args": [
+      "a b",
+      9
+    ],
+    "expected": "a b"
+  },
+  {
+    "args": [
+      "\ud83d\ude00 a",
+      1
+    ],
+    "expected": "\ud83d\ude00"
+  },
+  {
+    "args": [
+      "a\tb c",
+      1
+    ],
+    "expected": "a\tb"
+  },
+  {
+    "args": [
+      "a\nb c",
+      1
+    ],
+    "expected": "a\nb"
+  },
+  {
+    "args": [
+      "a\u00a0b c",
+      1
+    ],
+    "expected": "a\u00a0b"
+  },
+  {
+    "args": [
+      "a",
+      -1
+    ],
+    "error": "RangeError"
+  },
+  {
+    "args": [
+      "\ud800",
+      0
+    ],
+    "error": "RangeError"
+  }
+]
